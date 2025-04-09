@@ -50,9 +50,22 @@ position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
 offset = Vector2(-296, -568)
 
+[node name="Button" type="Button" parent="AnimatedSprite2D"]
+visibility_layer = 0
+offset_left = -328.0
+offset_top = -600.0
+offset_right = -264.0
+offset_bottom = -536.0
+
 [node name="StaticBody2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_6hy72")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
