@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hy72"]
 size = Vector2(64, 64)
 
-[node name="Placeholder Crop" type="Node2D"]
+[node name="Placeholder_Crop" type="Node2D"]
 script = ExtResource("1_pauwt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
