@@ -1,12 +1,15 @@
 extends Node2D
 
 var frame = 0
-
 var plantAge = 0.0
-@export var plantGrowthIncrement = 1.0
-
+var plantGrowthIncrement = 1.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var noder = $Node
+	var plantDict = noder.cropInfoDictionary
+	plantGrowthIncrement = plantDict["Corn"]
+	
+	
 	$AnimatedSprite2D.frame = 0
 	$Timer.start(plantGrowthIncrement)
 

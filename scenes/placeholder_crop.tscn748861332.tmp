@@ -69,6 +69,9 @@ autostart = true
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("3_5xma4")
+cropInfoDictionary = {
+"Wheat": 1.0
+}
 
 [connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
