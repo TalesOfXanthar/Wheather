@@ -7,7 +7,7 @@ var plantGrowthIncrement = 1.0
 func _ready() -> void:
 	var noder = $Node
 	var plantDict = noder.cropInfoDictionary
-	plantGrowthIncrement = plantDict["Corn"]
+	plantGrowthIncrement = plantDict["Corn"]["CropGrowthIncrement"]
 	
 	
 	$AnimatedSprite2D.frame = 0
