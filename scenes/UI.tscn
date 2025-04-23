@@ -19,12 +19,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_ro3t7")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1024.0
-offset_bottom = 576.0
-color = Color(0.117647, 0.129412, 0.239216, 1)
-
 [node name="MenuButton" type="MenuButton" parent="."]
 layout_mode = 0
 offset_right = 8.0

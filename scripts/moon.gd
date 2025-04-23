@@ -1,6 +1,9 @@
 extends Node2D
 @export var time = 0
 
+func _ready():
+	$globalTime
+
 func _process(delta: float) -> void:
 
 	

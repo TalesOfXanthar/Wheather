@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d4gr35n32udag" path="res://scripts/placeholder_crop.gd" id="1_pauwt"]
 [ext_resource type="Texture2D" uid="uid://bvjbngnqj123j" path="res://assets/wheat_spritesheet.png" id="2_o6suj"]
-[ext_resource type="Script" uid="uid://j4eslwvja4y" path="res://scripts/node.gd" id="3_5xma4"]
+[ext_resource type="Script" uid="uid://cwsqv66qn2idc" path="res://scripts/node.gd" id="3_5xma4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0aunw"]
 atlas = ExtResource("2_o6suj")
@@ -24,6 +24,14 @@ region = Rect2(64, 64, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Nothing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_0aunw")
 }, {
 "duration": 1.0,
@@ -36,7 +44,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ey21h")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Wheat",
 "speed": 5.0
 }]
 
@@ -49,9 +57,10 @@ script = ExtResource("1_pauwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
+animation = &"Wheat"
 offset = Vector2(-296, -568)
 
-[node name="Button" type="Button" parent="AnimatedSprite2D"]
+[node name="CropButton" type="Button" parent="AnimatedSprite2D"]
 visibility_layer = 0
 offset_left = -328.0
 offset_top = -600.0
@@ -63,13 +72,12 @@ offset_bottom = -536.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_6hy72")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="CropGrowthIncrementTimer" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
-[node name="Node" type="Node" parent="."]
+[node name="PlantDictionaryScript" type="Node" parent="."]
 script = ExtResource("3_5xma4")
 
-[connection signal="pressed" from="AnimatedSprite2D/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AnimatedSprite2D/CropButton" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="StaticBody2D" to="." method="_on_static_body_2d_mouse_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CropGrowthIncrementTimer" to="." method="_on_timer_timeout"]
