@@ -4,18 +4,11 @@
 script/source = "extends Control
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_menu_button_pressed(0	) -> void:
-	pass
 "
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ll0sn"]
 
 [sub_resource type="GDScript" id="GDScript_ll0sn"]
-script/source = "extends MenuButton
-func 
-"
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -42,5 +35,31 @@ item_count = 1
 popup/item_0/text = "Quit"
 popup/item_0/id = 0
 script = SubResource("GDScript_ll0sn")
+
+[node name="TabContainer" type="TabContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -257.0
+offset_top = 125.0
+grow_horizontal = 0
+grow_vertical = 2
+tab_alignment = 1
+current_tab = 0
+all_tabs_in_front = true
+
+[node name="MenuButton" type="MenuButton" parent="TabContainer"]
+layout_mode = 2
+item_count = 1
+popup/item_0/id = 0
+metadata/_tab_index = 0
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
