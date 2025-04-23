@@ -44,7 +44,7 @@ metadata/_tab_index = 0
 
 [node name="Wheat Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
-text = "Button"
+text = "Wheat"
 
 [node name="Carrot Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2

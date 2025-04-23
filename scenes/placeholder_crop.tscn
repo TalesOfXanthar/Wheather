@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d4gr35n32udag" path="res://scripts/placeholder_crop.gd" id="1_pauwt"]
 [ext_resource type="Texture2D" uid="uid://bf2y6572yp06x" path="res://assets/carrot_spritesheet.png" id="2_1iseo"]
 [ext_resource type="Texture2D" uid="uid://bvjbngnqj123j" path="res://assets/wheat_spritesheet.png" id="2_o6suj"]
-[ext_resource type="Script" uid="uid://cwsqv66qn2idc" path="res://scripts/node.gd" id="3_5xma4"]
+[ext_resource type="Script" uid="uid://cwsqv66qn2idc" path="res://scripts/plant_dictionary.gd" id="3_5xma4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgs"]
 atlas = ExtResource("2_1iseo")
@@ -61,7 +61,7 @@ animations = [{
 "texture": null
 }],
 "loop": true,
-"name": &"Nothing",
+"name": &"Ground",
 "speed": 5.0
 }, {
 "frames": [{
@@ -91,7 +91,7 @@ script = ExtResource("1_pauwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
-animation = &"Carrot"
+animation = &"Ground"
 offset = Vector2(-296, -568)
 
 [node name="CropButton" type="Button" parent="AnimatedSprite2D"]

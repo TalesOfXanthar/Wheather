@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://4gh2l1ak2t18"]
+[gd_scene load_steps=12 format=3 uid="uid://4gh2l1ak2t18"]
 
 [ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/New_Moon.png" id="1_3tcni"]
 [ext_resource type="Script" uid="uid://bq1u8cwq62axc" path="res://scripts/moon.gd" id="1_q6it2"]
@@ -67,8 +67,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="GDScript" id="GDScript_fyi6v"]
-
 [node name="Clock Cycle" type="Node2D"]
 script = ExtResource("1_q6it2")
 
@@ -76,9 +74,25 @@ script = ExtResource("1_q6it2")
 sprite_frames = SubResource("SpriteFrames_tdk27")
 frame = 5
 frame_progress = 0.943887
-script = SubResource("GDScript_fyi6v")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TimeSpeedLeftButton" type="Button" parent="Moon"]
+visibility_layer = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="TimeSpeedRightButton" type="Button" parent="Moon"]
+visibility_layer = 0
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+button_mask = 2
+
+[node name="MoonTimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Moon/TimeSpeedLeftButton" to="." method="_on_time_speed_left_button_pressed"]
+[connection signal="pressed" from="Moon/TimeSpeedRightButton" to="." method="_on_time_speed_right_button_pressed"]
+[connection signal="timeout" from="MoonTimer" to="." method="_on_timer_timeout"]
