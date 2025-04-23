@@ -1,14 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://t7r3fcl5f6bq"]
+[gd_scene load_steps=3 format=3 uid="uid://t7r3fcl5f6bq"]
 
-[sub_resource type="GDScript" id="GDScript_ro3t7"]
-script/source = "extends Control
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Script" uid="uid://wjx33o3khby" path="res://scripts/ui.gd" id="1_dj8aq"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ll0sn"]
-
-[sub_resource type="GDScript" id="GDScript_ll0sn"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -17,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_ro3t7")
+script = ExtResource("1_dj8aq")
 
 [node name="MenuButton" type="MenuButton" parent="."]
 layout_mode = 0
@@ -28,7 +22,6 @@ text = "Settings"
 item_count = 1
 popup/item_0/text = "Quit"
 popup/item_0/id = 0
-script = SubResource("GDScript_ll0sn")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 top_level = true
@@ -49,11 +42,11 @@ all_tabs_in_front = true
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Button" type="Button" parent="TabContainer/Shop"]
+[node name="Wheat Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 text = "Button"
 
-[node name="Button2" type="Button" parent="TabContainer/Shop"]
+[node name="Carrot Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 text = "Button 2"
 
@@ -63,3 +56,5 @@ layout_mode = 2
 metadata/_tab_index = 1
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_pressed"]
+[connection signal="pressed" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_pressed"]
