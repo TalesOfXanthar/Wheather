@@ -4,7 +4,7 @@ var frame = 0
 var plantAge = 0.0
 var plantGrowthIncrement = 1.0
 var cropState = "Ground"
-var cursorState = "Wheat"
+var cursorState = GlobalTimeScript.cursorState
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = "Ground"
