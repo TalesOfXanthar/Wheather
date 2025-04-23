@@ -51,15 +51,19 @@ tab_alignment = 1
 current_tab = 0
 all_tabs_in_front = true
 
-[node name="Shop" type="MenuButton" parent="TabContainer"]
+[node name="Shop" type="FlowContainer" parent="TabContainer"]
 layout_mode = 2
-switch_on_hover = true
-item_count = 1
-popup/item_0/text = "Wheat"
-popup/item_0/id = 0
 metadata/_tab_index = 0
 
-[node name="Upgrades" type="MenuBar" parent="TabContainer"]
+[node name="Button" type="Button" parent="TabContainer/Shop"]
+layout_mode = 2
+text = "Button"
+
+[node name="Button2" type="Button" parent="TabContainer/Shop"]
+layout_mode = 2
+text = "Button 2"
+
+[node name="Upgrades" type="FlowContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
