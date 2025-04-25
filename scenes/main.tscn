@@ -46,92 +46,92 @@ scale = Vector2(3, 3)
 
 [node name="CropScenes" type="Node" parent="."]
 
-[node name="Placeholder_Crop" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA1" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(96, 224)
 
-[node name="Placeholder_Crop2" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA2" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(160, 224)
 
-[node name="Placeholder_Crop3" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA3" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(224, 224)
 
-[node name="Placeholder_Crop4" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA4" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(288, 224)
 
-[node name="Placeholder_Crop17" parent="CropScenes" instance=ExtResource("5_tefeu")]
-position = Vector2(480, 352)
-
-[node name="Placeholder_Crop18" parent="CropScenes" instance=ExtResource("5_tefeu")]
-position = Vector2(544, 352)
-
-[node name="Placeholder_Crop19" parent="CropScenes" instance=ExtResource("5_tefeu")]
-position = Vector2(608, 352)
-
-[node name="Placeholder_Crop20" parent="CropScenes" instance=ExtResource("5_tefeu")]
-position = Vector2(672, 352)
-
-[node name="Placeholder_Crop5" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA5" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(352, 224)
 
-[node name="Placeholder_Crop6" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA6" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(416, 224)
 
-[node name="Placeholder_Crop7" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA7" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(480, 224)
 
-[node name="Placeholder_Crop8" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA8" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(544, 224)
 
-[node name="Placeholder_Crop9" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA9" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(608, 224)
 
-[node name="Placeholder_Crop10" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropA0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 224)
 
-[node name="Placeholder_Crop11" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB1" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(96, 352)
 
-[node name="Placeholder_Crop12" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB2" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(160, 352)
 
-[node name="Placeholder_Crop13" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB3" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(224, 352)
 
-[node name="Placeholder_Crop14" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB4" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(288, 352)
 
-[node name="Placeholder_Crop15" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB5" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(352, 352)
 
-[node name="Placeholder_Crop16" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB6" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(416, 352)
 
-[node name="Placeholder_Crop21" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropB7" parent="CropScenes" instance=ExtResource("5_tefeu")]
+position = Vector2(480, 352)
+
+[node name="CropB8" parent="CropScenes" instance=ExtResource("5_tefeu")]
+position = Vector2(544, 352)
+
+[node name="CropB9" parent="CropScenes" instance=ExtResource("5_tefeu")]
+position = Vector2(608, 352)
+
+[node name="CropB0" parent="CropScenes" instance=ExtResource("5_tefeu")]
+position = Vector2(672, 352)
+
+[node name="CropC1" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(96, 480)
 
-[node name="Placeholder_Crop22" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC2" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(160, 480)
 
-[node name="Placeholder_Crop23" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC3" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(224, 480)
 
-[node name="Placeholder_Crop24" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC4" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(288, 480)
 
-[node name="Placeholder_Crop25" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC5" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(352, 480)
 
-[node name="Placeholder_Crop26" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC6" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(416, 480)
 
-[node name="Placeholder_Crop27" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC7" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(480, 480)
 
-[node name="Placeholder_Crop28" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC8" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(544, 480)
 
-[node name="Placeholder_Crop29" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC9" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(608, 480)
 
-[node name="Placeholder_Crop30" parent="CropScenes" instance=ExtResource("5_tefeu")]
+[node name="CropC0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 480)
