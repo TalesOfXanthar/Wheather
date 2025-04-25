@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://4gh2l1ak2t18"]
+[gd_scene load_steps=16 format=3 uid="uid://4gh2l1ak2t18"]
 
 [ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/Spritesheets/New_Moon.png" id="1_3tcni"]
 [ext_resource type="Script" uid="uid://bq1u8cwq62axc" path="res://scripts/moon.gd" id="1_q6it2"]
+[ext_resource type="Texture2D" uid="uid://dwyv8f35gu0r3" path="res://assets/Spritesheets/Specila_Moons.png" id="3_7l7dh"]
 [ext_resource type="Texture2D" uid="uid://dhuqtvn0ftqan" path="res://assets/Spritesheets/Sun.png" id="3_fyi6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjvio"]
@@ -36,6 +37,14 @@ region = Rect2(0, 64, 32, 32)
 atlas = ExtResource("1_3tcni")
 region = Rect2(32, 64, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xatjt"]
+atlas = ExtResource("3_7l7dh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajh7a"]
+atlas = ExtResource("3_7l7dh")
+region = Rect2(0, 32, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_tdk27"]
 animations = [{
 "frames": [{
@@ -62,12 +71,28 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8li54")
+}],
+"loop": true,
+"name": &"MoonPhases",
+"speed": 5.0
 }, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xatjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajh7a")
+}],
+"loop": true,
+"name": &"SpecialMoons",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_fyi6v")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Sun",
 "speed": 5.0
 }]
 
@@ -76,8 +101,7 @@ script = ExtResource("1_q6it2")
 
 [node name="Moon" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tdk27")
-frame = 5
-frame_progress = 0.943887
+animation = &"Sun"
 
 [node name="MoonTimer" type="Timer" parent="."]
 autostart = true
