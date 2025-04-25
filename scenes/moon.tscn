@@ -75,24 +75,7 @@ sprite_frames = SubResource("SpriteFrames_tdk27")
 frame = 5
 frame_progress = 0.943887
 
-[node name="TimeSpeedLeftButton" type="Button" parent="Moon"]
-visibility_layer = 0
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
-
-[node name="TimeSpeedRightButton" type="Button" parent="Moon"]
-visibility_layer = 0
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
-button_mask = 2
-
 [node name="MoonTimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="pressed" from="Moon/TimeSpeedLeftButton" to="." method="_on_time_speed_left_button_pressed"]
-[connection signal="pressed" from="Moon/TimeSpeedRightButton" to="." method="_on_time_speed_right_button_pressed"]
 [connection signal="timeout" from="MoonTimer" to="." method="_on_timer_timeout"]
