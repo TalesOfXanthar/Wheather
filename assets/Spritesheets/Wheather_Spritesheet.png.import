@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dat5cyue3sma3"
-path="res://.godot/imported/New_Moon.png-5b61f14e4143d131f1db78de0a0cfa72.ctex"
+uid="uid://boabvrx1stmbl"
+path="res://.godot/imported/Wheather_Spritesheet.png-9fc89a37e620d72587b3629f1881d51a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/New_Moon.png"
-dest_files=["res://.godot/imported/New_Moon.png-5b61f14e4143d131f1db78de0a0cfa72.ctex"]
+source_file="res://assets/Spritesheets/Wheather_Spritesheet.png"
+dest_files=["res://.godot/imported/Wheather_Spritesheet.png-9fc89a37e620d72587b3629f1881d51a.ctex"]
 
 [params]
 

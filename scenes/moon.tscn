@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://4gh2l1ak2t18"]
+[gd_scene load_steps=13 format=3 uid="uid://4gh2l1ak2t18"]
 
-[ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/New_Moon.png" id="1_3tcni"]
+[ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/Spritesheets/New_Moon.png" id="1_3tcni"]
 [ext_resource type="Script" uid="uid://bq1u8cwq62axc" path="res://scripts/moon.gd" id="1_q6it2"]
+[ext_resource type="Texture2D" uid="uid://dhuqtvn0ftqan" path="res://assets/Spritesheets/Sun.png" id="3_fyi6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjvio"]
 atlas = ExtResource("1_3tcni")
@@ -61,6 +62,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8li54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fyi6v")
 }],
 "loop": true,
 "name": &"default",

@@ -1,6 +1,6 @@
 extends Node2D
-@export var time = 5
-
+@export var time = 8
+@export var isDay = true 
 func _ready():
 	$MoonTimer.wait_time = 10
 
@@ -9,7 +9,9 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	if time >= 7:
+	if isDay == true:
+		time = 8
+	elif time >= 7:
 		time = 0
 	else:
 		time += 1
