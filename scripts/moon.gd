@@ -2,7 +2,7 @@ extends Node2D
 @export var time = 8
 @export var isDay = true 
 func _ready():
-	$MoonTimer.wait_time = 10
+	pass
 
 func _process(delta: float) -> void:
 	pass
