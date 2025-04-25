@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
-[ext_resource type="PackedScene" uid="uid://dq8acyy4u0xct" path="res://scenes/placeholder_crop.tscn" id="2_dvh1x"]
+[ext_resource type="PackedScene" uid="uid://dq8acyy4u0xct" path="res://scenes/crop.tscn" id="2_dvh1x"]
 [ext_resource type="PackedScene" uid="uid://4gh2l1ak2t18" path="res://scenes/moon.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://t7r3fcl5f6bq" path="res://scenes/UI.tscn" id="5_tbgi4"]
 

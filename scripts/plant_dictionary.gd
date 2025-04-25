@@ -18,7 +18,7 @@ var cropInfoDictionary = {
 			}
 		},
 	"Carrot": {
-		"Value": 50,
+		"Value": 60,
 		"PlantCost": 20,
 		"CropGrowthIncrement": 2,
 		"WeatherFrailty": {
