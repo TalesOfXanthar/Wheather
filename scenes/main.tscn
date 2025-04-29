@@ -50,7 +50,7 @@ scale = Vector2(35.0964, -39.3672)
 
 [node name="Moon" parent="." instance=ExtResource("4_jyhfs")]
 top_level = true
-position = Vector2(976, 54)
+position = Vector2(960, 64)
 scale = Vector2(3, 3)
 
 [node name="UI" parent="." instance=ExtResource("5_tbgi4")]
