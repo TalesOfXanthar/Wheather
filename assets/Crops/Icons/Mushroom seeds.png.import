@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hmluneh0xlug"
-path="res://.godot/imported/Mushroom seeds.png-a37dbe835aeae7ead6238bb7e4f9c44f.ctex"
+path="res://.godot/imported/Mushroom seeds.png-7687fa877f0109d7142649e2a7646099.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Crops/Icons/Mushroom seeds.png"
-dest_files=["res://.godot/imported/Mushroom seeds.png-a37dbe835aeae7ead6238bb7e4f9c44f.ctex"]
+source_file="res://assets/crops/icons/Mushroom seeds.png"
+dest_files=["res://.godot/imported/Mushroom seeds.png-7687fa877f0109d7142649e2a7646099.ctex"]
 
 [params]
 
