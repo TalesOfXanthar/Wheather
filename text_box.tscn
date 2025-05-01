@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://l7wwgajl05ey"]
+
+[ext_resource type="Script" path="res://scripts/the_text_box.gd" id="1_k7ve7"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ss407"]
+specular_color = Color(1, 0.278431, 1, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 128.0
+offset_right = 896.0
+offset_bottom = 128.0
+texture = SubResource("CanvasTexture_ss407")
+
+[node name="TheTextBox" type="TextEdit" parent="."]
+layout_mode = 2
+offset_left = 128.0
+offset_right = 896.0
+offset_bottom = 128.0
+text = "hello"
+script = ExtResource("1_k7ve7")
