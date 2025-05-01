@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dboonm04mn4v5"
-path="res://.godot/imported/PepperStageOne.png-8dbada0928658092d8ce0488385d092c.ctex"
+uid="uid://65jthle8yujj"
+path="res://.godot/imported/PepperStageOne.png-82870fc5dc967781082111b93dd5ef0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/PepperStageOne.png"
-dest_files=["res://.godot/imported/PepperStageOne.png-8dbada0928658092d8ce0488385d092c.ctex"]
+source_file="res://assets/crops/growth_stages/PepperStageOne.png"
+dest_files=["res://.godot/imported/PepperStageOne.png-82870fc5dc967781082111b93dd5ef0b.ctex"]
 
 [params]
 

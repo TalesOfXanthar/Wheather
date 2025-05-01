@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkgg4b611wb58"
-path="res://.godot/imported/Pepper seeds.png-8b3dce5e6473fc33f0b5cb5f98e58c9a.ctex"
+uid="uid://b4b5qxbtwfa6l"
+path="res://.godot/imported/PepperSeedPacket.png-ab78a9a2769db656544fe93e3778368c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/icons/Pepper seeds.png"
-dest_files=["res://.godot/imported/Pepper seeds.png-8b3dce5e6473fc33f0b5cb5f98e58c9a.ctex"]
+source_file="res://assets/crops/icons/PepperSeedPacket.png"
+dest_files=["res://.godot/imported/PepperSeedPacket.png-ab78a9a2769db656544fe93e3778368c.ctex"]
 
 [params]
 
