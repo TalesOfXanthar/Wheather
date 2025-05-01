@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvjbngnqj123j"
-path="res://.godot/imported/wheat_spritesheet.png-13ae67bd154047bea9d4269a6a7a0e09.ctex"
+uid="uid://dat5cyue3sma3"
+path="res://.godot/imported/New_Moon.png-ad290ef22484fad128ce6f648b77ff0e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/wheat_spritesheet.png"
-dest_files=["res://.godot/imported/wheat_spritesheet.png-13ae67bd154047bea9d4269a6a7a0e09.ctex"]
+source_file="res://assets/moon/New_Moon.png"
+dest_files=["res://.godot/imported/New_Moon.png-ad290ef22484fad128ce6f648b77ff0e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhuqtvn0ftqan"
-path="res://.godot/imported/Sun.png-4ade2e474058709e64bc262378339626.ctex"
+uid="uid://bvjbngnqj123j"
+path="res://.godot/imported/wheat_spritesheet.png-2600c20dd377c21bb843357cdff97231.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spritesheets/Sun.png"
-dest_files=["res://.godot/imported/Sun.png-4ade2e474058709e64bc262378339626.ctex"]
+source_file="res://assets/crops/growth_stages/wheat_spritesheet.png"
+dest_files=["res://.godot/imported/wheat_spritesheet.png-2600c20dd377c21bb843357cdff97231.ctex"]
 
 [params]
 

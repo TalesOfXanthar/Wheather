@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckfqbjh3875mp"
-path="res://.godot/imported/tomato.png-0703326d65793356cd32fc5ba3f82ec8.ctex"
+uid="uid://dcncdpr0golmm"
+path="res://.godot/imported/placeholder farmland.png-a0db5aafdf4f4886fcd3f2e02b18a03c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tomato.png"
-dest_files=["res://.godot/imported/tomato.png-0703326d65793356cd32fc5ba3f82ec8.ctex"]
+source_file="res://assets/tiles/placeholder farmland.png"
+dest_files=["res://.godot/imported/placeholder farmland.png-a0db5aafdf4f4886fcd3f2e02b18a03c.ctex"]
 
 [params]
 

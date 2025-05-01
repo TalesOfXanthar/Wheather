@@ -26,9 +26,10 @@ func _on_timer_timeout():
 		
 func plant_crop():
 	cropState = GlobalTimeScript.cursorState
+	GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]
 	GlobalTimeScript.textBox = "Planted " + cropState
 	$AnimatedSprite2D.animation = cropState
-	$CropGrowthIncrementTimer.wait_time = (PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"] * GlobalTimeScript.globalTimeDilation)
+	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
 	$CropGrowthIncrementTimer.start()
 
 func return_to_ground():

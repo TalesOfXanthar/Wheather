@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boabvrx1stmbl"
-path="res://.godot/imported/Wheather_Spritesheet.png-9fc89a37e620d72587b3629f1881d51a.ctex"
+uid="uid://cmmif5vp3d5dg"
+path="res://.godot/imported/carrot.png-bfd021d80400efd111ca691b13f0cb39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spritesheets/Wheather_Spritesheet.png"
-dest_files=["res://.godot/imported/Wheather_Spritesheet.png-9fc89a37e620d72587b3629f1881d51a.ctex"]
+source_file="res://assets/placeholder_assets/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-bfd021d80400efd111ca691b13f0cb39.ctex"]
 
 [params]
 

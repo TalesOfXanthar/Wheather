@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bytyw8khi42f2"
-path="res://.godot/imported/placeholder crop.png-6fa3062ec1e6c32cccd6716a754e6d85.ctex"
+uid="uid://bmoaehn74ne2n"
+path="res://.godot/imported/wheat.png-e3be47e4aa79b1179b6fa9f42b86e303.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder crop.png"
-dest_files=["res://.godot/imported/placeholder crop.png-6fa3062ec1e6c32cccd6716a754e6d85.ctex"]
+source_file="res://assets/placeholder_assets/wheat.png"
+dest_files=["res://.godot/imported/wheat.png-e3be47e4aa79b1179b6fa9f42b86e303.ctex"]
 
 [params]
 

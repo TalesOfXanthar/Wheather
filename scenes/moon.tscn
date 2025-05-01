@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=3 uid="uid://4gh2l1ak2t18"]
 
-[ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/Spritesheets/New_Moon.png" id="1_3tcni"]
+[ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/moon/New_Moon.png" id="1_3tcni"]
 [ext_resource type="Script" uid="uid://bq1u8cwq62axc" path="res://scripts/moon.gd" id="1_q6it2"]
-[ext_resource type="Texture2D" uid="uid://dwyv8f35gu0r3" path="res://assets/Spritesheets/Specila_Moons.png" id="3_7l7dh"]
-[ext_resource type="Texture2D" uid="uid://dhuqtvn0ftqan" path="res://assets/Spritesheets/Sun.png" id="3_fyi6v"]
-[ext_resource type="Texture2D" uid="uid://boabvrx1stmbl" path="res://assets/Spritesheets/Wheather_Spritesheet.png" id="5_xatjt"]
+[ext_resource type="Texture2D" uid="uid://dwyv8f35gu0r3" path="res://assets/moon/Specila_Moons.png" id="3_7l7dh"]
+[ext_resource type="Texture2D" uid="uid://dhuqtvn0ftqan" path="res://assets/moon/Sun.png" id="3_fyi6v"]
+[ext_resource type="Texture2D" uid="uid://boabvrx1stmbl" path="res://assets/moon/Wheather_Spritesheet.png" id="5_xatjt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjvio"]
 atlas = ExtResource("1_3tcni")

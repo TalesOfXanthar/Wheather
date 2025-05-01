@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dwyv8f35gu0r3"
-path="res://.godot/imported/Specila_Moons.png-a9527b2e0ead1594895f07928903c605.ctex"
+path="res://.godot/imported/Specila_Moons.png-c5f73ac86552b9cd607180b1e427994d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spritesheets/Specila_Moons.png"
-dest_files=["res://.godot/imported/Specila_Moons.png-a9527b2e0ead1594895f07928903c605.ctex"]
+source_file="res://assets/moon/Specila_Moons.png"
+dest_files=["res://.godot/imported/Specila_Moons.png-c5f73ac86552b9cd607180b1e427994d.ctex"]
 
 [params]
 

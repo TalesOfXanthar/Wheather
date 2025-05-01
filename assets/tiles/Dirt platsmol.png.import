@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf2y6572yp06x"
-path="res://.godot/imported/carrot_spritesheet.png-b22f178bde0ac2ea53de126fc17602a0.ctex"
+uid="uid://deb02tq2ckk3a"
+path="res://.godot/imported/Dirt platsmol.png-fe7e80ad7db04764d4abb8cf7797cc0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/carrot_spritesheet.png"
-dest_files=["res://.godot/imported/carrot_spritesheet.png-b22f178bde0ac2ea53de126fc17602a0.ctex"]
+source_file="res://assets/tiles/Dirt platsmol.png"
+dest_files=["res://.godot/imported/Dirt platsmol.png-fe7e80ad7db04764d4abb8cf7797cc0f.ctex"]
 
 [params]
 

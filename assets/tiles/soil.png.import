@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://us1saam8jajh"
-path="res://.godot/imported/corn.png-0e369b667d1fad1836494955ab0adc35.ctex"
+uid="uid://ckekdfiuekr03"
+path="res://.godot/imported/soil.png-98e1d66457bc8450db3cd218f127f434.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/corn.png"
-dest_files=["res://.godot/imported/corn.png-0e369b667d1fad1836494955ab0adc35.ctex"]
+source_file="res://assets/tiles/soil.png"
+dest_files=["res://.godot/imported/soil.png-98e1d66457bc8450db3cd218f127f434.ctex"]
 
 [params]
 

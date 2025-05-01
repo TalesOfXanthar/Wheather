@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dat5cyue3sma3"
-path="res://.godot/imported/New_Moon.png-8ca0c87edcace21d2e18ff6fb440d533.ctex"
+uid="uid://bf2y6572yp06x"
+path="res://.godot/imported/carrot_spritesheet.png-189c8a16f1e53a9aca6d3eec1df75ab8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spritesheets/New_Moon.png"
-dest_files=["res://.godot/imported/New_Moon.png-8ca0c87edcace21d2e18ff6fb440d533.ctex"]
+source_file="res://assets/crops/growth_stages/carrot_spritesheet.png"
+dest_files=["res://.godot/imported/carrot_spritesheet.png-189c8a16f1e53a9aca6d3eec1df75ab8.ctex"]
 
 [params]
 

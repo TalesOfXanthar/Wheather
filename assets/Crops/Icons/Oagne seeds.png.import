@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvt7561w6ricd"
-path="res://.godot/imported/Oagne seeds.png-f578d2700b52303fea203acb085be7d3.ctex"
+path="res://.godot/imported/Oagne seeds.png-30a75d3b22d0c5a7165f5f1e758ff6ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Crops/Icons/Oagne seeds.png"
-dest_files=["res://.godot/imported/Oagne seeds.png-f578d2700b52303fea203acb085be7d3.ctex"]
+source_file="res://assets/crops/icons/Oagne seeds.png"
+dest_files=["res://.godot/imported/Oagne seeds.png-30a75d3b22d0c5a7165f5f1e758ff6ea.ctex"]
 
 [params]
 

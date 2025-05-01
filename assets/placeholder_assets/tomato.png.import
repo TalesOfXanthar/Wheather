@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8bpg6rl8dm7u"
-path="res://.godot/imported/Grass.png-dd5cb87a98b967a0aae631f5db6acd40.ctex"
+uid="uid://ckfqbjh3875mp"
+path="res://.godot/imported/tomato.png-e1a97da821f862377e3b5eae533fa9ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Grass.png"
-dest_files=["res://.godot/imported/Grass.png-dd5cb87a98b967a0aae631f5db6acd40.ctex"]
+source_file="res://assets/placeholder_assets/tomato.png"
+dest_files=["res://.godot/imported/tomato.png-e1a97da821f862377e3b5eae533fa9ce.ctex"]
 
 [params]
 

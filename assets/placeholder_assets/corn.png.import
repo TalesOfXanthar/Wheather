@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcncdpr0golmm"
-path="res://.godot/imported/placeholder farmland.png-1fac1802d895cb414fc1685ddd52bbce.ctex"
+uid="uid://us1saam8jajh"
+path="res://.godot/imported/corn.png-f5eb086528fd6a2b745faa797554c89e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder farmland.png"
-dest_files=["res://.godot/imported/placeholder farmland.png-1fac1802d895cb414fc1685ddd52bbce.ctex"]
+source_file="res://assets/placeholder_assets/corn.png"
+dest_files=["res://.godot/imported/corn.png-f5eb086528fd6a2b745faa797554c89e.ctex"]
 
 [params]
 

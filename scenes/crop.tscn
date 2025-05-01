@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://dq8acyy4u0xct"]
 
 [ext_resource type="Script" uid="uid://d4gr35n32udag" path="res://scripts/placeholder_crop.gd" id="1_pauwt"]
-[ext_resource type="Texture2D" uid="uid://bf2y6572yp06x" path="res://assets/carrot_spritesheet.png" id="2_1iseo"]
-[ext_resource type="Texture2D" uid="uid://bvjbngnqj123j" path="res://assets/wheat_spritesheet.png" id="2_o6suj"]
+[ext_resource type="Texture2D" uid="uid://bf2y6572yp06x" path="res://assets/crops/growth_stages/carrot_spritesheet.png" id="2_1iseo"]
+[ext_resource type="Texture2D" uid="uid://bvjbngnqj123j" path="res://assets/crops/growth_stages/wheat_spritesheet.png" id="2_o6suj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgs"]
 atlas = ExtResource("2_1iseo")
