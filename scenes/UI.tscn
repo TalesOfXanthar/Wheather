@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmmif5vp3d5dg" path="res://assets/placeholder_assets/carrot.png" id="3_75u2n"]
 [ext_resource type="Texture2D" uid="uid://us1saam8jajh" path="res://assets/placeholder_assets/corn.png" id="4_3wlde"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/placeholder_assets/tomato.png" id="5_xpksx"]
-[ext_resource type="Script" path="res://scripts/settings.gd" id="7_xpksx"]
+[ext_resource type="Script" uid="uid://bgqh2hi77441b" path="res://scripts/settings.gd" id="7_xpksx"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -63,11 +63,6 @@ icon = ExtResource("4_3wlde")
 layout_mode = 2
 icon = ExtResource("5_xpksx")
 
-[node name="Upgrades" type="FlowContainer" parent="TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
 [node name="Settings" type="MenuButton" parent="."]
 layout_mode = 1
 offset_top = -8.0
@@ -76,5 +71,5 @@ offset_bottom = 23.0
 text = "Settings"
 script = ExtResource("7_xpksx")
 
-[connection signal="pressed" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_pressed"]
-[connection signal="pressed" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_pressed"]
+[connection signal="gui_input" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_gui_input"]
