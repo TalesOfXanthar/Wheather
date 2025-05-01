@@ -6,8 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmmif5vp3d5dg" path="res://assets/carrot.png" id="3_75u2n"]
 [ext_resource type="Texture2D" uid="uid://us1saam8jajh" path="res://assets/corn.png" id="4_3wlde"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/tomato.png" id="5_xpksx"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_ll0sn"]
+[ext_resource type="Script" uid="uid://bgqh2hi77441b" path="res://scripts/settings.gd" id="7_xpksx"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -19,16 +18,6 @@ offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dj8aq")
-
-[node name="MenuButton" type="MenuButton" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-button_group = SubResource("ButtonGroup_ll0sn")
-text = "Settings"
-item_count = 1
-popup/item_0/text = "Quit"
-popup/item_0/id = 0
 
 [node name="TabContainer" type="TabContainer" parent="."]
 top_level = true
@@ -60,7 +49,11 @@ vertical_icon_alignment = 0
 
 [node name="Carrot Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
+theme = ExtResource("2_3wlde")
+text = "40"
 icon = ExtResource("3_75u2n")
+icon_alignment = 1
+vertical_icon_alignment = 0
 
 [node name="Corn Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
@@ -75,6 +68,13 @@ visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
-[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="Settings" type="MenuButton" parent="."]
+layout_mode = 1
+offset_top = -8.0
+offset_right = 70.0
+offset_bottom = 23.0
+text = "Settings"
+script = ExtResource("7_xpksx")
+
 [connection signal="pressed" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_pressed"]
 [connection signal="pressed" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_pressed"]
