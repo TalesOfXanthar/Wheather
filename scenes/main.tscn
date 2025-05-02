@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=16 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b8bpg6rl8dm7u" path="res://assets/tiles/Grass.png" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://t7r3fcl5f6bq" path="res://scenes/UI.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://pv7y6o0xsaay" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
-[ext_resource type="PackedScene" uid="uid://l7wwgajl05ey" path="res://text_box.tscn" id="9_85g3d"]
+[ext_resource type="Texture2D" uid="uid://cjd7gn08cpoak" path="res://assets/tiles/UI/Moon_Tile.png" id="10_choun"]
+[ext_resource type="PackedScene" uid="uid://bnco3jkb63o4c" path="res://scenes/text_box.tscn" id="10_ya4ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -162,4 +163,9 @@ position = Vector2(608, 480)
 [node name="CropC0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 480)
 
-[node name="Control" parent="." instance=ExtResource("9_85g3d")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(960, 64)
+scale = Vector2(2, 2)
+texture = ExtResource("10_choun")
+
+[node name="Control" parent="." instance=ExtResource("10_ya4ey")]
