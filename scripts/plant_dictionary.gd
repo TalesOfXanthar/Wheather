@@ -10,9 +10,9 @@ var cropInfoDictionary = {
 			}
 		},
 	"Corn": {
-		"Value": 225,
-		"PlantCost": 40,
-		"CropGrowthIncrement": 3,
+		"Value": 25.00,
+		"PlantCost": 7.69,
+		"CropGrowthIncrement": 20,
 		"WeatherFrailty": {
 			"Tornado": 75
 			}

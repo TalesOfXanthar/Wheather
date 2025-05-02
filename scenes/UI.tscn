@@ -66,11 +66,11 @@ text = "Pepper
 19.99"
 icon = ExtResource("5_24e4x")
 
-[node name="Tomato Button" type="Button" parent="TabContainer/Shop"]
+[node name="Corn Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
-text = "Tomato
-Tbd"
+text = "Corn
+7.69"
 icon = ExtResource("5_xpksx")
 
 [node name="Settings" type="MenuButton" parent="."]
@@ -84,3 +84,4 @@ script = ExtResource("7_xpksx")
 [connection signal="gui_input" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Pepper Button" to="." method="_on_pepper_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Corn Button" to="." method="_on_corn_button_gui_input"]
