@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp583rv8w7fux"
-path="res://.godot/imported/PepperStageThree.png-919292f83c30e4f97d5fab537811df06.ctex"
+uid="uid://cajcwh652yg18"
+path="res://.godot/imported/Text_Box.png-c59e6019efe6856c88735a291123388b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/growth_stages/PepperStageThree.png"
-dest_files=["res://.godot/imported/PepperStageThree.png-919292f83c30e4f97d5fab537811df06.ctex"]
+source_file="res://assets/tiles/UI/Text_Box.png"
+dest_files=["res://.godot/imported/Text_Box.png-c59e6019efe6856c88735a291123388b.ctex"]
 
 [params]
 
