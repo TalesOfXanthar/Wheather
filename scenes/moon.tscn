@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://4gh2l1ak2t18"]
+[gd_scene load_steps=16 format=3 uid="uid://4gh2l1ak2t18"]
 
 [ext_resource type="Texture2D" uid="uid://dat5cyue3sma3" path="res://assets/moon/New_Moon.png" id="1_3tcni"]
 [ext_resource type="Script" uid="uid://bq1u8cwq62axc" path="res://scripts/moon.gd" id="1_q6it2"]
 [ext_resource type="Texture2D" uid="uid://dwyv8f35gu0r3" path="res://assets/moon/Specila_Moons.png" id="3_7l7dh"]
 [ext_resource type="Texture2D" uid="uid://dhuqtvn0ftqan" path="res://assets/moon/Sun.png" id="3_fyi6v"]
-[ext_resource type="Texture2D" uid="uid://boabvrx1stmbl" path="res://assets/moon/Wheather_Spritesheet.png" id="5_xatjt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjvio"]
 atlas = ExtResource("1_3tcni")
@@ -45,22 +44,6 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ajh7a"]
 atlas = ExtResource("3_7l7dh")
 region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4c55k"]
-atlas = ExtResource("5_xatjt")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_byueb"]
-atlas = ExtResource("5_xatjt")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5uti5"]
-atlas = ExtResource("5_xatjt")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yaejw"]
-atlas = ExtResource("5_xatjt")
-region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tdk27"]
 animations = [{
@@ -111,23 +94,6 @@ animations = [{
 "loop": true,
 "name": &"Sun",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4c55k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_byueb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5uti5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yaejw")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
 }]
 
 [node name="Clock Cycle" type="Node2D"]
@@ -135,7 +101,7 @@ script = ExtResource("1_q6it2")
 
 [node name="Moon" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tdk27")
-animation = &"new_animation"
+animation = &"MoonPhases"
 
 [node name="MoonTimer" type="Timer" parent="."]
 autostart = true

@@ -11,6 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#PlantDictionary.cropInfoDictionary["Wheat"]["WeatherFrailty"]["Tornado"] = 0
 	pass
 
 func _on_button_pressed():
@@ -40,4 +41,3 @@ func return_to_ground():
 	$CropGrowthIncrementTimer.stop()
 	frame = 0
 	print(GlobalTimeScript.playerMoney)
-	
