@@ -6,7 +6,9 @@ func _on_wheat_button_gui_input(event: InputEvent) -> void:
 				MOUSE_BUTTON_LEFT:
 						GlobalTimeScript.cursorState = "Wheat"
 				MOUSE_BUTTON_RIGHT:
-					pass
+					print ("Right")
+					$TabContainer/Shop.hide()
+					$"TabContainer/Upgrades/Wheat Upgrades".show()
 
 func _on_carrot_button_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -33,3 +35,8 @@ func _on_corn_button_gui_input(event: InputEvent) -> void:
 						GlobalTimeScript.cursorState = "Corn"
 				MOUSE_BUTTON_RIGHT:
 					pass
+
+
+func _on_price_pressed() -> void:
+	PlantDictionary["cropInfoDictionary"]["Wheat"]["Value"] = 70.00
+	$"TabContainer/Upgrades/Wheat Upgrades/Price".hide()
