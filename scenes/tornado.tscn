@@ -26,6 +26,9 @@ animations = [{
 z_index = 4
 collision_layer = 6
 collision_mask = 6
+gravity_scale = 0.0
+linear_damp_mode = 1
+angular_damp_mode = 1
 script = ExtResource("1_shahy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
