@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://65pvlocqkdnk"
-path="res://.godot/imported/CornStageOne.png-4c668d0f570b0a6a66f174061f5b995d.ctex"
+path="res://.godot/imported/CornStageOne.png-75040ef53b924ddf568dd71aede83504.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Crops/growth_stages/CornStageOne.png"
-dest_files=["res://.godot/imported/CornStageOne.png-4c668d0f570b0a6a66f174061f5b995d.ctex"]
+source_file="res://assets/crops/growth_stages/CornStageOne.png"
+dest_files=["res://.godot/imported/CornStageOne.png-75040ef53b924ddf568dd71aede83504.ctex"]
 
 [params]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=19 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cwwjmnvmdhqhd" path="res://scenes/tornado.tscn" id="2_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://ckekdfiuekr03" path="res://assets/tiles/soil.png" id="3_tefeu"]
 [ext_resource type="Texture2D" uid="uid://deb02tq2ckk3a" path="res://assets/tiles/Dirt platsmol.png" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://4gh2l1ak2t18" path="res://scenes/moon.tscn" id="4_jyhfs"]
@@ -46,9 +47,16 @@ sources/1 = SubResource("TileSetAtlasSource_o6xl0")
 sources/3 = SubResource("TileSetAtlasSource_ya4ey")
 sources/4 = SubResource("TileSetAtlasSource_eb6dy")
 
+[sub_resource type="Curve2D" id="Curve2D_ya4ey"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 640, 0, 0, 0, 0, -64, 640, 0, 0, 0, 0, -64, -64)
+}
+point_count = 5
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(1.81899e-12, 1.90735e-06)
 script = ExtResource("1_sugp2")
+tornado_scene = ExtResource("2_eb6dy")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_right = 1024.0
@@ -177,3 +185,11 @@ position = Vector2(608, 480)
 position = Vector2(672, 480)
 
 [node name="Control" parent="." instance=ExtResource("10_ya4ey")]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ya4ey")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-64, -64)
+rotation = -1.5708
+progress = 3712.0

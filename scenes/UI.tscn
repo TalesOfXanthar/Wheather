@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b4b5qxbtwfa6l" path="res://assets/crops/icons/PepperSeedPacket.png" id="5_24e4x"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/placeholder_assets/tomato.png" id="5_xpksx"]
 [ext_resource type="Texture2D" uid="uid://dof4qrwdtupum" path="res://assets/icon.svg" id="7_24e4x"]
-[ext_resource type="Script" uid="uid://bgqh2hi77441b" path="res://scripts/settings.gd" id="7_xpksx"]
+[ext_resource type="Script" path="res://scripts/settings.gd" id="7_xpksx"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
