@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq5pntrwj16v7"
-path="res://.godot/imported/Oino seeds.png-27e96e08f54af30bb50bdb262ad34d1d.ctex"
+path="res://.godot/imported/Oino seeds.png-f4926c82e7a714aae2c478618a029296.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/icons/Oino seeds.png"
-dest_files=["res://.godot/imported/Oino seeds.png-27e96e08f54af30bb50bdb262ad34d1d.ctex"]
+source_file="res://assets/crops/Icons/Oino seeds.png"
+dest_files=["res://.godot/imported/Oino seeds.png-f4926c82e7a714aae2c478618a029296.ctex"]
 
 [params]
 

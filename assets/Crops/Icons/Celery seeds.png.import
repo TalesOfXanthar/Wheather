@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv3b0lsvau6eg"
-path="res://.godot/imported/Celery seeds.png-5f185ba7b0ef779bf219ec6474ab3e60.ctex"
+path="res://.godot/imported/Celery seeds.png-96ec846e04963aab53b00939f975e49c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/icons/Celery seeds.png"
-dest_files=["res://.godot/imported/Celery seeds.png-5f185ba7b0ef779bf219ec6474ab3e60.ctex"]
+source_file="res://assets/crops/Icons/Celery seeds.png"
+dest_files=["res://.godot/imported/Celery seeds.png-96ec846e04963aab53b00939f975e49c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd5ddforjtkkh"
-path="res://.godot/imported/Brocoline seeds.png-f5d1532ec6a51555bd6f1780e26291bb.ctex"
+path="res://.godot/imported/Brocoline seeds.png-c569324a07958e5c544154d99d3e04a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/icons/Brocoline seeds.png"
-dest_files=["res://.godot/imported/Brocoline seeds.png-f5d1532ec6a51555bd6f1780e26291bb.ctex"]
+source_file="res://assets/crops/Icons/Brocoline seeds.png"
+dest_files=["res://.godot/imported/Brocoline seeds.png-c569324a07958e5c544154d99d3e04a0.ctex"]
 
 [params]
 
