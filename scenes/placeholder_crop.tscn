@@ -5,8 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://bvjbngnqj123j" path="res://assets/crops/growth_stages/wheat_spritesheet.png" id="2_o6suj"]
 [ext_resource type="Script" uid="uid://cwsqv66qn2idc" path="res://scripts/plant_dictionary.gd" id="3_5xma4"]
 [ext_resource type="Texture2D" uid="uid://dggk3882elnh8" path="res://assets/crops/growth_stages/PepperSeeds.png" id="3_lremn"]
+[ext_resource type="Texture2D" uid="uid://eqseoqcqn8ml" path="res://assets/crops/growth_stages/CornSeeds.png" id="3_pbxne"]
+[ext_resource type="Texture2D" uid="uid://37xwn1u2jmcl" path="res://assets/crops/growth_stages/CornStageOne.png" id="4_1wr41"]
 [ext_resource type="Texture2D" uid="uid://65jthle8yujj" path="res://assets/crops/growth_stages/PepperStageOne.png" id="4_yb480"]
+[ext_resource type="Texture2D" uid="uid://y1nsx0r7f853" path="res://assets/crops/growth_stages/CornStageTwo.png" id="5_euxxt"]
 [ext_resource type="Texture2D" uid="uid://dw2tpnicdrag2" path="res://assets/crops/growth_stages/PepperStageTwo.png" id="5_mc21y"]
+[ext_resource type="Texture2D" uid="uid://bpm3k03nek4d" path="res://assets/crops/growth_stages/CornStageThree.png" id="6_7kvly"]
 [ext_resource type="Texture2D" uid="uid://bp583rv8w7fux" path="res://assets/crops/growth_stages/PepperStageThree.png" id="6_gsibh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgs"]
@@ -24,14 +28,6 @@ region = Rect2(0, 64, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lremn"]
 atlas = ExtResource("2_1iseo")
 region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lremn"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yb480"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mc21y"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gsibh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0aunw"]
 atlas = ExtResource("2_o6suj")
@@ -65,21 +61,21 @@ animations = [{
 "texture": SubResource("AtlasTexture_lremn")
 }],
 "loop": true,
-"name": &"Carrot",
+"name": &"Carrots",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_lremn")
+"texture": ExtResource("3_pbxne")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_yb480")
+"texture": ExtResource("4_1wr41")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_mc21y")
+"texture": ExtResource("5_euxxt")
 }, {
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_gsibh")
+"texture": ExtResource("6_7kvly")
 }],
 "loop": true,
 "name": &"Corn",

@@ -50,7 +50,7 @@ icon = ExtResource("2_ro3t7")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="Carrot Button" type="Button" parent="TabContainer/Shop"]
+[node name="Carrots Button" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
 text = "40"
@@ -127,7 +127,7 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 
 [connection signal="gui_input" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_gui_input"]
-[connection signal="gui_input" from="TabContainer/Shop/Carrot Button" to="." method="_on_carrot_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Carrots Button" to="." method="_on_carrot_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Pepper Button" to="." method="_on_pepper_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Corn Button" to="." method="_on_corn_button_gui_input"]
 [connection signal="pressed" from="TabContainer/Upgrades/Exit" to="." method="_on_button_pressed"]

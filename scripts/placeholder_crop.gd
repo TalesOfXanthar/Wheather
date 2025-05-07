@@ -16,7 +16,8 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed():
 	if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
-		plant_crop()
+		if  GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
+			plant_crop()
 	if frame == 3:
 		return_to_ground()
 
@@ -35,7 +36,7 @@ func plant_crop():
 
 func return_to_ground():
 	GlobalTimeScript.playerMoney += PlantDictionary.cropInfoDictionary[cropState]["Value"]
-	GlobalTimeScript.textBox = "Harvested " + cropState
+	GlobalTimeScript.textBox = " You harvested " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["Value"]) + "!"
 	cropState = "Ground"
 	$AnimatedSprite2D.animation = "Ground"
 	$CropGrowthIncrementTimer.stop()

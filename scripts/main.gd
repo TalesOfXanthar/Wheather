@@ -4,7 +4,14 @@ extends Node2D
 
 func _process(delta: float):
 	GlobalTimeScript.playerMoney = snapped(GlobalTimeScript.playerMoney, 0.01)
+	
+	if str(GlobalTimeScript.playerMoney)[-3] == ".":
+		$Money.text = "$" + str(GlobalTimeScript.playerMoney)
+	else:
+		$Money.text = "$" + str(GlobalTimeScript.playerMoney) + "0"
+	
 	# print(PlantDictionary["cropInfoDictionary"]["Wheat"]["Value"])
+	
 	if randi_range(0, 100) == 100:
 		var tornado = tornado_scene.instantiate()
 		
