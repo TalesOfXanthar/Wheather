@@ -7,9 +7,10 @@ func _on_wheat_button_gui_input(event: InputEvent) -> void:
 						GlobalTimeScript.cursorState = "Wheat"
 				MOUSE_BUTTON_RIGHT:
 					print ("Right")
-					$TabContainer/Shop.hide()
+					$TabContainer.hide()
 					$TabContainer/Upgrades/Wheat/Economy.show()
 					$TabContainer/Upgrades/Wheat/Resistance.show()
+					$TabContainer/Upgrades/Exit.show()
 					
 func _on_carrot_button_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
@@ -40,17 +41,18 @@ func _on_corn_button_gui_input(event: InputEvent) -> void:
 
 func _on_price_pressed() -> void:
 	PlantDictionary["cropInfoDictionary"]["Wheat"]["Value"] += 20.00
-	GlobalTimeScript.textBox = "Wheat has increaded in value"
+	GlobalTimeScript.textBox = "Wheat has increaded in value."
 	$"TabContainer/Upgrades/Wheat Upgrades/Price".hide()
 
 func _on_button_pressed() -> void:
-	$TabContainer/Shop.show()
+	print("worked??")
+	$TabContainer.show()
 	$TabContainer/Upgrades/Wheat/Economy.hide()
 	$TabContainer/Upgrades/Wheat/Resistance.hide()
+	$TabContainer/Upgrades/Exit.hide()
 
 
 func _on_tornado_resistance_pressed() -> void:
 	PlantDictionary["cropInfoDictionary"]["Wheat"]["WeatherFrailty"]["Tornado"] += 20.00
-	GlobalTimeScript.textBox = "Wheat is now more resistant to tornados"
+	GlobalTimeScript.textBox = "Wheat is now more resistant to tornados."
 	$"TabContainer/Upgrades/Wheat/Resistance/Tornado Resistance".hide()
-	$TabContainer/Upgrades/Exit.show()

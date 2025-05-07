@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://t7r3fcl5f6bq"]
+[gd_scene load_steps=9 format=3 uid="uid://t7r3fcl5f6bq"]
 
 [ext_resource type="Script" uid="uid://wjx33o3khby" path="res://scripts/ui.gd" id="1_dj8aq"]
 [ext_resource type="Theme" uid="uid://cjjnou2sqyo8x" path="res://Icon Font.tres" id="2_3wlde"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://b4b5qxbtwfa6l" path="res://assets/crops/icons/PepperSeedPacket.png" id="5_24e4x"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/placeholder_assets/tomato.png" id="5_xpksx"]
 [ext_resource type="Texture2D" uid="uid://j8bebbouaaba" path="res://assets/Tornado.png" id="8_ukj8e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpksx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="UI" type="Control"]
 z_index = 3
@@ -32,6 +35,7 @@ offset_left = -256.0
 offset_top = 128.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xpksx")
 tab_alignment = 1
 current_tab = 0
 all_tabs_in_front = true
@@ -76,6 +80,7 @@ icon = ExtResource("5_xpksx")
 
 [node name="Exit" type="Button" parent="TabContainer/Upgrades"]
 visible = false
+z_index = 3
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -93,6 +98,7 @@ text = "X"
 
 [node name="Economy" type="VFlowContainer" parent="TabContainer/Upgrades/Wheat"]
 visible = false
+z_index = 3
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
@@ -110,6 +116,7 @@ text = "Value"
 
 [node name="Resistance" type="VFlowContainer" parent="TabContainer/Upgrades/Wheat"]
 visible = false
+z_index = 3
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0

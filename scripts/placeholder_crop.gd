@@ -16,8 +16,10 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed():
 	if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
-		if  GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
+		if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
 			plant_crop()
+		else:
+			GlobalTimeScript.textBox = "You can't plant that, you don't have enough money!"
 	if frame == 3:
 		return_to_ground()
 
