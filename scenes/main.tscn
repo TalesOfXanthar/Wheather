@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=20 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://t7r3fcl5f6bq" path="res://scenes/UI.tscn" id="5_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://pv7y6o0xsaay" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://q42rgghuwhk3" path="res://assets/tiles/UI/FarmBorder.png" id="6_ya4ey"]
-[ext_resource type="Texture2D" uid="uid://cjd7gn08cpoak" path="res://assets/tiles/UI/Moon_Tile.png" id="10_choun"]
+[ext_resource type="Texture2D" uid="uid://dgp8e3wq63u5r" path="res://assets/tiles/UI/MoonTile.png" id="8_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://bs6hoams6wjvm" path="res://assets/tiles/UI/MenuMoneyTile.png" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://bnco3jkb63o4c" path="res://scenes/text_box.tscn" id="10_ya4ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
@@ -79,13 +80,15 @@ scale = Vector2(35.0964, -39.3672)
 
 [node name="MoonBackround" type="Sprite2D" parent="BorderBackroundSprites"]
 position = Vector2(960, 64)
-scale = Vector2(2, 2)
-texture = ExtResource("10_choun")
+texture = ExtResource("8_eb6dy")
 
 [node name="FarmBorder" type="Sprite2D" parent="BorderBackroundSprites"]
-visible = false
 position = Vector2(384, 352)
 texture = ExtResource("6_ya4ey")
+
+[node name="MenuMoneyBackround" type="Sprite2D" parent="BorderBackroundSprites"]
+position = Vector2(64, 64)
+texture = ExtResource("10_trceg")
 
 [node name="Moon" parent="." instance=ExtResource("4_jyhfs")]
 top_level = true
