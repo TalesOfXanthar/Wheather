@@ -43,7 +43,7 @@ func return_to_ground():
 	print(GlobalTimeScript.playerMoney)
 
 func _on_static_body_2d_body_entered(body: Node2D) -> void:
-	if cropState != "Ground" && randi_range(1, 100) > PlantDictionary.cropInfoDictionary[cropState]["WeatherFrailty"]["Tornado"]:
+	if cropState != "Ground" && randi_range(1, 100) > PlantDictionary.cropInfoDictionary[cropState]["WeatherFrailty"]["Tornado"] * (frame + 1)/3:
 		cropState = "Ground"
 		$AnimatedSprite2D.animation = "Ground"
 		$CropGrowthIncrementTimer.stop()

@@ -22,6 +22,8 @@ func _process(delta: float):
 	# Choose the velocity for the mob.
 		var velocity = Vector2(randf_range(50.0, 100.0), 0.0)
 		tornado.linear_velocity = velocity.rotated(direction)
+		
+		tornado.rotation = 0
 
 		# Spawn the mob by adding it to the Main scene.
 		add_child(tornado)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=21 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -8,11 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://4gh2l1ak2t18" path="res://scenes/moon.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://b8bpg6rl8dm7u" path="res://assets/tiles/Grass.png" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://t7r3fcl5f6bq" path="res://scenes/UI.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://pv7y6o0xsaay" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://b2re5pgsbhr7d" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://q42rgghuwhk3" path="res://assets/tiles/UI/FarmBorder.png" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dgp8e3wq63u5r" path="res://assets/tiles/UI/MoonTile.png" id="8_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://bs6hoams6wjvm" path="res://assets/tiles/UI/MenuMoneyTile.png" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://bnco3jkb63o4c" path="res://scenes/text_box.tscn" id="10_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://b63nyrfjudbcg" path="res://assets/tiles/UI/TextBox.png" id="11_a8y0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -50,9 +51,9 @@ sources/4 = SubResource("TileSetAtlasSource_eb6dy")
 
 [sub_resource type="Curve2D" id="Curve2D_ya4ey"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -64, -64, 0, 0, 0, 0, 1088, -64, 0, 0, 0, 0, 1088, 640, 0, 0, 0, 0, -64, 640, 0, 0, 0, 0, -64, -64)
+"points": PackedVector2Array(0, 0, 0, 0, -128, -128, 0, 0, 0, 0, 512, -128, 0, 0, 0, 0, 1152, -128, 0, 0, 0, 0, 1152, 288, 0, 0, 0, 0, 1152, 704, 0, 0, 0, 0, 480, 704, 0, 0, 0, 0, -128, 704, 0, 0, 0, 0, -128, 256, 0, 0, 0, 0, -128, -128)
 }
-point_count = 5
+point_count = 9
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1.81899e-12, 1.90735e-06)
@@ -75,23 +76,33 @@ rotation = 3.14159
 scale = Vector2(35.0964, -39.3672)
 
 [node name="UI" parent="." instance=ExtResource("5_tbgi4")]
+z_index = 3
 
 [node name="BorderBackroundSprites" type="Node" parent="."]
 
 [node name="MoonBackround" type="Sprite2D" parent="BorderBackroundSprites"]
+z_index = 2
 position = Vector2(960, 64)
 texture = ExtResource("8_eb6dy")
 
 [node name="FarmBorder" type="Sprite2D" parent="BorderBackroundSprites"]
+z_index = 2
 position = Vector2(384, 352)
 texture = ExtResource("6_ya4ey")
 
 [node name="MenuMoneyBackround" type="Sprite2D" parent="BorderBackroundSprites"]
+z_index = 2
 position = Vector2(64, 64)
 texture = ExtResource("10_trceg")
 
+[node name="TextBoxBackround" type="Sprite2D" parent="BorderBackroundSprites"]
+z_index = 2
+position = Vector2(512, 64)
+texture = ExtResource("11_a8y0u")
+
 [node name="Moon" parent="." instance=ExtResource("4_jyhfs")]
 top_level = true
+z_index = 3
 position = Vector2(960, 64)
 scale = Vector2(3, 3)
 
@@ -187,12 +198,13 @@ position = Vector2(608, 480)
 [node name="CropC0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 480)
 
-[node name="Control" parent="." instance=ExtResource("10_ya4ey")]
+[node name="TextBox" parent="." instance=ExtResource("10_ya4ey")]
+z_index = 3
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ya4ey")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(-64, -64)
+position = Vector2(-128, 383.996)
 rotation = -1.5708
 progress = 3712.0

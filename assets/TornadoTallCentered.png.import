@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4b5qxbtwfa6l"
-path="res://.godot/imported/PepperSeedPacket.png-c586d1b3d4e3ca364a8d3eec2c9fb18b.ctex"
+uid="uid://8xhwbua55yna"
+path="res://.godot/imported/TornadoTallCentered.png-0a4db641cf163b8943776f5cf057ae0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/Icons/PepperSeedPacket.png"
-dest_files=["res://.godot/imported/PepperSeedPacket.png-c586d1b3d4e3ca364a8d3eec2c9fb18b.ctex"]
+source_file="res://assets/TornadoTallCentered.png"
+dest_files=["res://.godot/imported/TornadoTallCentered.png-0a4db641cf163b8943776f5cf057ae0c.ctex"]
 
 [params]
 
