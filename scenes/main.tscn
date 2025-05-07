@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://4gh2l1ak2t18" path="res://scenes/moon.tscn" id="4_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://b8bpg6rl8dm7u" path="res://assets/tiles/Grass.png" id="5_choun"]
 [ext_resource type="PackedScene" uid="uid://t7r3fcl5f6bq" path="res://scenes/UI.tscn" id="5_tbgi4"]
-[ext_resource type="PackedScene" uid="uid://b2re5pgsbhr7d" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://pv7y6o0xsaay" path="res://scenes/placeholder_crop.tscn" id="5_tefeu"]
 [ext_resource type="Texture2D" uid="uid://q42rgghuwhk3" path="res://assets/tiles/UI/FarmBorder.png" id="6_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://dgp8e3wq63u5r" path="res://assets/tiles/UI/MoonTile.png" id="8_eb6dy"]
 [ext_resource type="Texture2D" uid="uid://bs6hoams6wjvm" path="res://assets/tiles/UI/MenuMoneyTile.png" id="10_trceg"]
@@ -63,7 +63,7 @@ tornado_scene = ExtResource("2_eb6dy")
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_right = 1024.0
 offset_bottom = 576.0
-color = Color(0.117647, 0.129412, 0.239216, 1)
+color = Color(0.458571, 0.37862, 0.284031, 1)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 top_level = true
