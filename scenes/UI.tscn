@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://j8bebbouaaba" path="res://assets/Tornado.png" id="8_ukj8e"]
 
 [node name="UI" type="Control"]
+z_index = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +22,7 @@ script = ExtResource("1_dj8aq")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 top_level = true
+z_index = 3
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -35,6 +37,7 @@ current_tab = 0
 all_tabs_in_front = true
 
 [node name="Shop" type="FlowContainer" parent="TabContainer"]
+z_index = 3
 layout_mode = 2
 alignment = 1
 metadata/_tab_index = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=23 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -49,6 +49,13 @@ sources/1 = SubResource("TileSetAtlasSource_o6xl0")
 sources/3 = SubResource("TileSetAtlasSource_ya4ey")
 sources/4 = SubResource("TileSetAtlasSource_eb6dy")
 
+[sub_resource type="Gradient" id="Gradient_a8y0u"]
+colors = PackedColorArray(0.726423, 0.488676, 0.162667, 1, 0.913725, 0.564706, 0.211765, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jkv2x"]
+gradient = SubResource("Gradient_a8y0u")
+fill_from = Vector2(0, 1)
+
 [sub_resource type="Curve2D" id="Curve2D_ya4ey"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -128, -128, 0, 0, 0, 0, 512, -128, 0, 0, 0, 0, 1152, -128, 0, 0, 0, 0, 1152, 288, 0, 0, 0, 0, 1152, 704, 0, 0, 0, 0, 480, 704, 0, 0, 0, 0, -128, 704, 0, 0, 0, 0, -128, 256, 0, 0, 0, 0, -128, -128)
@@ -75,10 +82,28 @@ position = Vector2(512, 288)
 rotation = 3.14159
 scale = Vector2(35.0964, -39.3672)
 
-[node name="UI" parent="." instance=ExtResource("5_tbgi4")]
-z_index = 3
-
 [node name="BorderBackroundSprites" type="Node" parent="."]
+
+[node name="SideBack" type="TextureRect" parent="BorderBackroundSprites"]
+z_index = 2
+offset_left = 760.0
+offset_right = 1024.0
+offset_bottom = 576.0
+texture = SubResource("GradientTexture2D_jkv2x")
+
+[node name="TopBack" type="TextureRect" parent="BorderBackroundSprites"]
+z_index = 2
+offset_right = 760.0
+offset_bottom = 136.0
+texture = SubResource("GradientTexture2D_jkv2x")
+
+[node name="BottomBack" type="TextureRect" parent="BorderBackroundSprites"]
+z_index = 2
+offset_left = -56.0
+offset_top = 568.0
+offset_right = 8.0
+offset_bottom = 632.0
+texture = SubResource("GradientTexture2D_jkv2x")
 
 [node name="MoonBackround" type="Sprite2D" parent="BorderBackroundSprites"]
 z_index = 2
@@ -200,6 +225,9 @@ position = Vector2(672, 480)
 
 [node name="TextBox" parent="." instance=ExtResource("10_ya4ey")]
 z_index = 3
+
+[node name="UI" parent="." instance=ExtResource("5_tbgi4")]
+z_index = 4
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_ya4ey")

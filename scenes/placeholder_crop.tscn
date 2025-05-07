@@ -26,16 +26,12 @@ atlas = ExtResource("2_1iseo")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lremn"]
-load_path = "res://.godot/imported/CornSeeds.png-22f0108fca023084b74fdf3210633e57.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yb480"]
-load_path = "res://.godot/imported/CornStageOne.png-4c668d0f570b0a6a66f174061f5b995d.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mc21y"]
-load_path = "res://.godot/imported/CornStageTwo.png-200f1f15bdc2ffb4d0641788b4267724.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gsibh"]
-load_path = "res://.godot/imported/CornStageThree.png-d26f493188eda324616f5b1d7df170e8.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0aunw"]
 atlas = ExtResource("2_o6suj")
