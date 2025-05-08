@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=23 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://bs6hoams6wjvm" path="res://assets/tiles/UI/MenuMoneyTile.png" id="10_trceg"]
 [ext_resource type="PackedScene" uid="uid://bnco3jkb63o4c" path="res://scenes/text_box.tscn" id="10_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://b63nyrfjudbcg" path="res://assets/tiles/UI/TextBox.png" id="11_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://cnmofqjf0wqnv" path="res://assets/Coin.png" id="15_jbj1t"]
+[ext_resource type="Theme" uid="uid://cjjnou2sqyo8x" path="res://Icon Font.tres" id="16_muem4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -89,11 +91,6 @@ texture = ExtResource("8_eb6dy")
 z_index = 2
 position = Vector2(384, 352)
 texture = ExtResource("6_ya4ey")
-
-[node name="MenuMoneyBackround" type="Sprite2D" parent="BorderBackroundSprites"]
-z_index = 2
-position = Vector2(64, 64)
-texture = ExtResource("10_trceg")
 
 [node name="TextBoxBackround" type="Sprite2D" parent="BorderBackroundSprites"]
 z_index = 2
@@ -208,3 +205,21 @@ curve = SubResource("Curve2D_ya4ey")
 position = Vector2(-128, 383.996)
 rotation = -1.5708
 progress = 3712.0
+
+[node name="MenuMoneyBackround" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(64, 64)
+texture = ExtResource("10_trceg")
+
+[node name="Coin" type="Sprite2D" parent="MenuMoneyBackround"]
+visibility_layer = 3
+position = Vector2(-31, 33)
+texture = ExtResource("15_jbj1t")
+
+[node name="Cash" type="RichTextLabel" parent="MenuMoneyBackround"]
+offset_left = -22.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme = ExtResource("16_muem4")
+horizontal_alignment = 1
+vertical_alignment = 1

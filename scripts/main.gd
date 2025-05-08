@@ -28,3 +28,4 @@ func _process(delta: float):
 		# Spawn the mob by adding it to the Main scene.
 		add_child(tornado)
 		
+		$MenuMoneyBackround/Cash.text = str(GlobalTimeScript.playerMoney)
