@@ -7,3 +7,4 @@ func _ready() -> void:
 func _process(delta: float):
 	if GlobalTimeScript.textBox != textUpdater:
 		text = GlobalTimeScript.textBox
+	

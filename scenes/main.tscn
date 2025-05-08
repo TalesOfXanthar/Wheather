@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=27 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://b63nyrfjudbcg" path="res://assets/tiles/UI/TextBox.png" id="11_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://c8djiibporiaj" path="res://assets/tiles/UI/ShopTile.png" id="11_jbj1t"]
 [ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="15_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://o4b4u8g88q5l" path="res://scenes/weather_text.tscn" id="17_muem4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -260,3 +261,10 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("15_jkv2x")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_jkv2x")
+
+[node name="WeatherTimer" type="Timer" parent="."]
+
+[node name="WeatherText" parent="." instance=ExtResource("17_muem4")]
+z_index = 3
+
+[connection signal="timeout" from="WeatherTimer" to="." method="_on_weather_timer_timeout"]

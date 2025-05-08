@@ -133,7 +133,7 @@ script = ExtResource("1_pauwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
-animation = &"Corn"
+animation = &"Wheat"
 offset = Vector2(-296, -568)
 
 [node name="CropButton" type="Button" parent="AnimatedSprite2D"]
