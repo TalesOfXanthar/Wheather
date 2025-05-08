@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://t7r3fcl5f6bq"]
+[gd_scene load_steps=10 format=3 uid="uid://t7r3fcl5f6bq"]
 
 [ext_resource type="Script" uid="uid://wjx33o3khby" path="res://scripts/ui.gd" id="1_dj8aq"]
 [ext_resource type="Theme" uid="uid://cjjnou2sqyo8x" path="res://Icon Font.tres" id="2_3wlde"]
 [ext_resource type="Texture2D" uid="uid://bmoaehn74ne2n" path="res://assets/placeholder_assets/wheat.png" id="2_ro3t7"]
-[ext_resource type="Texture2D" uid="uid://cmmif5vp3d5dg" path="res://assets/placeholder_assets/carrot.png" id="3_75u2n"]
+[ext_resource type="Texture2D" uid="uid://dcd02x2m40673" path="res://assets/crops/icons/Carrot Seeds.png" id="4_3wlde"]
 [ext_resource type="Texture2D" uid="uid://b4b5qxbtwfa6l" path="res://assets/crops/icons/PepperSeedPacket.png" id="5_24e4x"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/placeholder_assets/tomato.png" id="5_xpksx"]
+[ext_resource type="Texture2D" uid="uid://cnmofqjf0wqnv" path="res://assets/Coin.png" id="7_24e4x"]
 [ext_resource type="Texture2D" uid="uid://j8bebbouaaba" path="res://assets/Tornado.png" id="8_ukj8e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpksx"]
@@ -37,16 +38,17 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xpksx")
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 all_tabs_in_front = true
 
 [node name="Shop" type="FlowContainer" parent="TabContainer"]
+visible = false
 z_index = 3
 layout_mode = 2
 alignment = 1
 metadata/_tab_index = 0
 
-[node name="Wheat Button" type="Button" parent="TabContainer/Shop"]
+[node name="Wheat Seed" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
 text = "12.99"
@@ -54,88 +56,115 @@ icon = ExtResource("2_ro3t7")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="Carrots Button" type="Button" parent="TabContainer/Shop"]
+[node name="Carrots Seed" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
 text = "40"
-icon = ExtResource("3_75u2n")
+icon = ExtResource("4_3wlde")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="Pepper Button" type="Button" parent="TabContainer/Shop"]
+[node name="Pepper Seed" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
 text = "Pepper
 19.99"
 icon = ExtResource("5_24e4x")
 
-[node name="Corn Button" type="Button" parent="TabContainer/Shop"]
+[node name="Corn Seed" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 theme = ExtResource("2_3wlde")
 text = "Corn
 7.69"
 icon = ExtResource("5_xpksx")
 
-[node name="Upgrades" type="Node" parent="TabContainer"]
+[node name="Upgrades" type="Control" parent="TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
 
-[node name="Exit" type="Button" parent="TabContainer/Upgrades"]
+[node name="Crops" type="FlowContainer" parent="TabContainer/Upgrades"]
 visible = false
-z_index = 3
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -416.0
-offset_right = -224.0
-offset_bottom = -384.0
-grow_horizontal = 0
-grow_vertical = 0
+layout_mode = 0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 417.0
+alignment = 1
+
+[node name="Wheat" type="Button" parent="TabContainer/Upgrades/Crops"]
+layout_mode = 2
+theme = ExtResource("2_3wlde")
+icon = ExtResource("2_ro3t7")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Carrots" type="Button" parent="TabContainer/Upgrades/Crops"]
+layout_mode = 2
+theme = ExtResource("2_3wlde")
+icon = ExtResource("4_3wlde")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Pepper" type="Button" parent="TabContainer/Upgrades/Crops"]
+layout_mode = 2
+theme = ExtResource("2_3wlde")
+icon = ExtResource("5_24e4x")
+
+[node name="Corn" type="Button" parent="TabContainer/Upgrades/Crops"]
+layout_mode = 2
+theme = ExtResource("2_3wlde")
+icon = ExtResource("5_xpksx")
+
+[node name="Selection" type="Control" parent="TabContainer/Upgrades"]
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 259.0
+offset_bottom = 418.0
+
+[node name="Button" type="Button" parent="TabContainer/Upgrades/Selection"]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 32.0
 text = "X"
 
-[node name="Wheat" type="Node" parent="TabContainer/Upgrades"]
+[node name="Wheat Upgrades" type="Control" parent="TabContainer/Upgrades/Selection"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Economy" type="VFlowContainer" parent="TabContainer/Upgrades/Wheat"]
-visible = false
-z_index = 3
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = 193.0
-offset_right = -129.0
-grow_horizontal = 0
-grow_vertical = 2
+[node name="Economy" type="VBoxContainer" parent="TabContainer/Upgrades/Selection/Wheat Upgrades"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 32.0
+offset_right = 125.0
+offset_bottom = 417.0
 
-[node name="Sell Price" type="Button" parent="TabContainer/Upgrades/Wheat/Economy"]
-visible = false
+[node name="Sell Price" type="Button" parent="TabContainer/Upgrades/Selection/Wheat Upgrades/Economy"]
 layout_mode = 2
-text = "Value"
+theme = ExtResource("2_3wlde")
+text = "Sell
+Price"
+icon = ExtResource("7_24e4x")
+icon_alignment = 1
+vertical_icon_alignment = 0
 
-[node name="Resistance" type="VFlowContainer" parent="TabContainer/Upgrades/Wheat"]
-visible = false
-z_index = 3
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -129.0
-offset_top = 198.0
-grow_horizontal = 0
-grow_vertical = 2
+[node name="Resistance" type="VBoxContainer" parent="TabContainer/Upgrades/Selection/Wheat Upgrades"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 32.0
+offset_right = 245.0
+offset_bottom = 416.0
 
-[node name="Tornado Resistance" type="Button" parent="TabContainer/Upgrades/Wheat/Resistance"]
+[node name="Button" type="Button" parent="TabContainer/Upgrades/Selection/Wheat Upgrades/Resistance"]
 layout_mode = 2
-text = "Tornado"
+theme = ExtResource("2_3wlde")
+text = "Tornado 
+Resistance"
 icon = ExtResource("8_ukj8e")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[connection signal="gui_input" from="TabContainer/Shop/Wheat Button" to="." method="_on_wheat_button_gui_input"]
-[connection signal="gui_input" from="TabContainer/Shop/Carrots Button" to="." method="_on_carrot_button_gui_input"]
-[connection signal="gui_input" from="TabContainer/Shop/Pepper Button" to="." method="_on_pepper_button_gui_input"]
-[connection signal="gui_input" from="TabContainer/Shop/Corn Button" to="." method="_on_corn_button_gui_input"]
-[connection signal="pressed" from="TabContainer/Upgrades/Exit" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TabContainer/Upgrades/Wheat/Resistance/Tornado Resistance" to="." method="_on_tornado_resistance_pressed"]
+[connection signal="gui_input" from="TabContainer/Shop/Wheat Seed" to="." method="_on_wheat_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Carrots Seed" to="." method="_on_carrot_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Pepper Seed" to="." method="_on_pepper_button_gui_input"]
+[connection signal="gui_input" from="TabContainer/Shop/Corn Seed" to="." method="_on_corn_button_gui_input"]
