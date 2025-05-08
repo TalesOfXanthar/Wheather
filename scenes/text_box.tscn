@@ -20,6 +20,7 @@ offset_left = 144.0
 offset_top = 16.0
 offset_right = 880.0
 offset_bottom = 112.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_dyarx")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_qdwih")

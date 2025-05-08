@@ -17,7 +17,7 @@ var cropInfoDictionary = {
 			"Tornado": 75
 			}
 		},
-	"Carrot": {
+	"Carrots": {
 		"Value": 60,
 		"PlantCost": 20,
 		"CropGrowthIncrement": 2,
