@@ -2,6 +2,7 @@ extends Node2D
 
 @export var tornado_scene: PackedScene
 var initiated = false
+var rainChecker = 0
 
 func _ready() -> void:
 	$WeatherCheck.start(randi_range(5,10))
@@ -22,6 +23,14 @@ func _process(delta: float):
 		initiated = true
 		$WeatherTimer.start(randi_range(5,10))
 		#randi_range(5,10)
+	
+	elif GlobalTimeScript.currentWeather == "Rain" && randi_range(1, 500) == 500:
+		GlobalTimeScript.precipitation -= abs(rainChecker - 2)
+		if randi_range(1, 2) == 2:
+			rainChecker += 1
+			if rainChecker == 6:
+				GlobalTimeScript.currentWeather = "None"
+		print("So your probably wondering how I got here...")
 	
 func spawnTornado():
 	var tornado = tornado_scene.instantiate()
@@ -75,6 +84,7 @@ func _on_weather_check_timeout() -> void:
 					#High precipitation, passed low temp check, failed really low temp check
 					GlobalTimeScript.currentWeather = "Rain"
 					print(GlobalTimeScript.currentWeather)
+					rainChecker = 0
 			else:
 				#High precipitation, failed low temp check
 				GlobalTimeScript.currentWeather = "Clouds"
