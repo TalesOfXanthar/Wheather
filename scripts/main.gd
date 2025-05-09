@@ -17,6 +17,7 @@ func _process(delta: float):
 		print("yeah cool")
 		initiated = true
 		$WeatherTimer.start(randi_range(5,10))
+		#randi_range(5,10)
 	
 func spawnTornado():
 	var tornado = tornado_scene.instantiate()
@@ -50,3 +51,4 @@ func _on_weather_timer_timeout() -> void:
 		if GlobalTimeScript.weatherTrigger == true:
 			GlobalTimeScript.currentWeather = "None"
 			GlobalTimeScript.weatherTrigger = false
+			print("it worked!!!")

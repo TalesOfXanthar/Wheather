@@ -3,10 +3,14 @@ extends Node2D
 @export var isDay = true 
 var moonPhase = -0.5
 var specialMoonChance = 0
+var previousWeather = "None"
 func _ready():
 	pass
 
 func _process(delta: float):
+	if GlobalTimeScript.currentWeather != previousWeather:
+		$AnimatedSprite2D.animation = GlobalTimeScript.currentWeather
+	previousWeather = GlobalTimeScript.currentWeather
 	pass
 
 func _on_timer_timeout():
