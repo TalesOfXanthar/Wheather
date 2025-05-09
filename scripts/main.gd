@@ -52,3 +52,7 @@ func _on_weather_timer_timeout() -> void:
 			GlobalTimeScript.currentWeather = "None"
 			GlobalTimeScript.weatherTrigger = false
 			print("it worked!!!")
+
+
+func _on_settings_pressed() -> void:
+	pass # Replace with function body.

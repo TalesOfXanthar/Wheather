@@ -267,4 +267,16 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jkv2x")
 [node name="WeatherText" parent="." instance=ExtResource("17_muem4")]
 z_index = 3
 
+[node name="Settings" type="Node" parent="."]
+
+[node name="Settings" type="Button" parent="Settings"]
+z_index = 3
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 116.0
+offset_bottom = 52.0
+theme_type_variation = &"FlatButton"
+text = "Settings"
+
 [connection signal="timeout" from="WeatherTimer" to="." method="_on_weather_timer_timeout"]
+[connection signal="pressed" from="Settings/Settings" to="." method="_on_settings_pressed"]
