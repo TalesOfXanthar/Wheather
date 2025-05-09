@@ -3,6 +3,9 @@ extends Node2D
 @export var tornado_scene: PackedScene
 var initiated = false
 
+func _ready() -> void:
+	$WeatherCheck.start(randi_range(5,10))
+
 func _process(delta: float):
 	GlobalTimeScript.playerMoney = snapped(GlobalTimeScript.playerMoney, 0.01)
 	
@@ -15,6 +18,7 @@ func _process(delta: float):
 	
 	if GlobalTimeScript.currentWeather == "Wind" && !initiated:
 		print("yeah cool")
+		GlobalTimeScript.precipitation += 3
 		initiated = true
 		$WeatherTimer.start(randi_range(5,10))
 		#randi_range(5,10)
@@ -48,6 +52,7 @@ func _on_weather_timer_timeout() -> void:
 		print("yeah cool2")
 		initiated = false
 		spawnTornado()
+		GlobalTimeScript.precipitation -= 2
 		if GlobalTimeScript.weatherTrigger == true:
 			GlobalTimeScript.currentWeather = "None"
 			GlobalTimeScript.weatherTrigger = false
@@ -56,3 +61,26 @@ func _on_weather_timer_timeout() -> void:
 
 func _on_settings_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_weather_check_timeout() -> void:
+	if GlobalTimeScript.currentWeather == "None":
+		if randi_range(1,100) < GlobalTimeScript.precipitation:
+			if randi_range(1,100) > GlobalTimeScript.tempature:
+				if randi_range(1,50) > GlobalTimeScript.tempature:
+					#High precipitation, passed low temp check, passed really low temp check
+					GlobalTimeScript.currentWeather = "Hail"
+					print(GlobalTimeScript.currentWeather)
+				else:
+					#High precipitation, passed low temp check, failed really low temp check
+					GlobalTimeScript.currentWeather = "Rain"
+					print(GlobalTimeScript.currentWeather)
+			else:
+				#High precipitation, failed low temp check
+				GlobalTimeScript.currentWeather = "Clouds"
+				print(GlobalTimeScript.currentWeather)
+		else:
+			if randi_range(1,100) < GlobalTimeScript.tempature:
+				#Low precipitation, passed high temp check
+				GlobalTimeScript.currentWeather = "Wind"
+				print(GlobalTimeScript.currentWeather)
