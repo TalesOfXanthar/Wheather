@@ -20,6 +20,11 @@ func _process(delta: float) -> void:
 		elif randi_range(1, 60) == 60 && !PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["RainGood"]:
 			$CropGrowthIncrementTimer.stop()
 			$CropGrowthIncrementTimer.start(remainingTimer + 0.25)
+	if GlobalTimeScript.currentWeather == "Hail" && cropState != "Ground":
+		var remainingTimer = $CropGrowthIncrementTimer.time_left
+		if randi_range(1, 50) == 60:
+			$CropGrowthIncrementTimer.stop()
+			$CropGrowthIncrementTimer.start(remainingTimer + 0.2)
 
 func _on_button_pressed():
 	if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
@@ -44,6 +49,7 @@ func plant_crop():
 	$AnimatedSprite2D.animation = cropState
 	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
 	$CropGrowthIncrementTimer.start()
+	GlobalTimeScript.precipitation += 3
 
 func return_to_ground():
 	GlobalTimeScript.playerMoney += PlantDictionary.cropInfoDictionary[cropState]["Value"]
@@ -53,7 +59,8 @@ func return_to_ground():
 	$CropGrowthIncrementTimer.stop()
 	frame = 0
 	print(GlobalTimeScript.playerMoney)
-	
+	GlobalTimeScript.precipitation -= 2
+	GlobalTimeScript.tempature += 2
 
 func _on_static_body_2d_body_entered(body: Node2D) -> void:
 	GlobalTimeScript.weatherTrigger = true

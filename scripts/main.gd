@@ -5,7 +5,7 @@ var initiated = false
 var rainChecker = 0
 
 func _ready() -> void:
-	$WeatherCheck.start(randi_range(5,10))
+	$WeatherCheck.start(randi_range(10,15))
 
 func _process(delta: float):
 	GlobalTimeScript.playerMoney = snapped(GlobalTimeScript.playerMoney, 0.01)
@@ -19,18 +19,37 @@ func _process(delta: float):
 	
 	if GlobalTimeScript.currentWeather == "Wind" && !initiated:
 		print("yeah cool")
-		GlobalTimeScript.precipitation += 3
+		GlobalTimeScript.precipitation += 5
 		initiated = true
 		$WeatherTimer.start(randi_range(5,10))
 		#randi_range(5,10)
 	
 	elif GlobalTimeScript.currentWeather == "Rain" && randi_range(1, 500) == 500:
 		GlobalTimeScript.precipitation -= abs(rainChecker - 2)
+		GlobalTimeScript.tempature -= abs(rainChecker - 2)
 		if randi_range(1, 2) == 2:
 			rainChecker += 1
 			if rainChecker == 6:
 				GlobalTimeScript.currentWeather = "None"
 		print("So your probably wondering how I got here...")
+	
+	elif GlobalTimeScript.currentWeather == "Hail" && randi_range(1, 450) == 450:
+		GlobalTimeScript.precipitation -= abs(rainChecker - 4)
+		GlobalTimeScript.tempature += abs(rainChecker + 4)
+		if randi_range(1, 3) != 1:
+			rainChecker += 1
+			if rainChecker == 5:
+				GlobalTimeScript.currentWeather = "None"
+		print("So you probably know how I got here...")
+	
+	if GlobalTimeScript.precipitation > 100:
+		GlobalTimeScript.precipitation = 100
+	if GlobalTimeScript.precipitation < 0:
+		GlobalTimeScript.precipitation = 0
+	if GlobalTimeScript.tempature > 100:
+		GlobalTimeScript.tempature = 100
+	if GlobalTimeScript.tempature < 0:
+		GlobalTimeScript.tempature = 0
 	
 func spawnTornado():
 	var tornado = tornado_scene.instantiate()
@@ -80,6 +99,7 @@ func _on_weather_check_timeout() -> void:
 					#High precipitation, passed low temp check, passed really low temp check
 					GlobalTimeScript.currentWeather = "Hail"
 					print(GlobalTimeScript.currentWeather)
+					rainChecker = 0
 				else:
 					#High precipitation, passed low temp check, failed really low temp check
 					GlobalTimeScript.currentWeather = "Rain"
