@@ -65,8 +65,8 @@ func _on_settings_pressed() -> void:
 
 func _on_weather_check_timeout() -> void:
 	if GlobalTimeScript.currentWeather == "None":
-		if randi_range(1,100) < GlobalTimeScript.precipitation:
-			if randi_range(1,100) > GlobalTimeScript.tempature:
+		if randi_range(20,100) < GlobalTimeScript.precipitation:
+			if randi_range(1,80) > GlobalTimeScript.tempature:
 				if randi_range(1,50) > GlobalTimeScript.tempature:
 					#High precipitation, passed low temp check, passed really low temp check
 					GlobalTimeScript.currentWeather = "Hail"
@@ -80,7 +80,7 @@ func _on_weather_check_timeout() -> void:
 				GlobalTimeScript.currentWeather = "Clouds"
 				print(GlobalTimeScript.currentWeather)
 		else:
-			if randi_range(1,100) < GlobalTimeScript.tempature:
+			if randi_range(20,100) < GlobalTimeScript.tempature:
 				#Low precipitation, passed high temp check
 				GlobalTimeScript.currentWeather = "Wind"
 				print(GlobalTimeScript.currentWeather)

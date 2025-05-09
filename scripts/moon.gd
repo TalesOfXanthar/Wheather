@@ -5,8 +5,9 @@ var moonPhase = -0.5
 var specialMoonChance = 0
 var previousWeather = "None"
 func _ready():
-	pass
-
+	$AnimatedSprite2D.animation = "None"
+	
+	
 func _process(delta: float):
 	if GlobalTimeScript.currentWeather != previousWeather:
 		$AnimatedSprite2D.animation = GlobalTimeScript.currentWeather

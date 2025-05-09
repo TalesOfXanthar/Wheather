@@ -12,7 +12,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#PlantDictionary.cropInfoDictionary["Wheat"]["WeatherFrailty"]["Tornado"] = 0
-	pass
+	if GlobalTimeScript.currentWeather == "Rain" && cropState != "Ground":
+		var remainingTimer = $CropGrowthIncrementTimer.time_left
+		if randi_range(1, 60) == 60 && PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["RainGood"]:
+			$CropGrowthIncrementTimer.stop()
+			$CropGrowthIncrementTimer.start(remainingTimer - 0.25)
+		elif randi_range(1, 60) == 60 && !PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["RainGood"]:
+			$CropGrowthIncrementTimer.stop()
+			$CropGrowthIncrementTimer.start(remainingTimer + 0.25)
 
 func _on_button_pressed():
 	if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
@@ -27,6 +34,8 @@ func _on_timer_timeout():
 	if frame != 3:
 		frame += 1
 	$AnimatedSprite2D.frame = frame
+	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
+	$CropGrowthIncrementTimer.start()
 		
 func plant_crop():
 	cropState = GlobalTimeScript.cursorState
@@ -44,6 +53,7 @@ func return_to_ground():
 	$CropGrowthIncrementTimer.stop()
 	frame = 0
 	print(GlobalTimeScript.playerMoney)
+	
 
 func _on_static_body_2d_body_entered(body: Node2D) -> void:
 	GlobalTimeScript.weatherTrigger = true

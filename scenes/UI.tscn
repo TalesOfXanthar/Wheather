@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://wjx33o3khby" path="res://scripts/ui.gd" id="1_dj8aq"]
 [ext_resource type="Theme" uid="uid://cjjnou2sqyo8x" path="res://Icon Font.tres" id="2_3wlde"]
 [ext_resource type="Texture2D" uid="uid://bmoaehn74ne2n" path="res://assets/placeholder_assets/wheat.png" id="2_ro3t7"]
-[ext_resource type="Texture2D" uid="uid://dcd02x2m40673" path="res://assets/crops/Icons/Carrot Seeds.png" id="4_3wlde"]
-[ext_resource type="Texture2D" uid="uid://b4b5qxbtwfa6l" path="res://assets/crops/Icons/PepperSeedPacket.png" id="5_24e4x"]
+[ext_resource type="Texture2D" uid="uid://dcd02x2m40673" path="res://assets/crops/icons/Carrot Seeds.png" id="4_3wlde"]
+[ext_resource type="Texture2D" uid="uid://b4b5qxbtwfa6l" path="res://assets/crops/icons/PepperSeedPacket.png" id="5_24e4x"]
 [ext_resource type="Texture2D" uid="uid://ckfqbjh3875mp" path="res://assets/placeholder_assets/tomato.png" id="5_xpksx"]
 [ext_resource type="Texture2D" uid="uid://cnmofqjf0wqnv" path="res://assets/Coin.png" id="7_24e4x"]
 [ext_resource type="Texture2D" uid="uid://j8bebbouaaba" path="res://assets/Tornado.png" id="8_ukj8e"]
@@ -38,11 +38,10 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xpksx")
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 all_tabs_in_front = true
 
 [node name="Shop" type="FlowContainer" parent="TabContainer"]
-visible = false
 z_index = 3
 layout_mode = 2
 alignment = 1
@@ -83,11 +82,11 @@ text = "Corn
 icon = ExtResource("5_xpksx")
 
 [node name="Upgrades" type="Control" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="Crops" type="FlowContainer" parent="TabContainer/Upgrades"]
-visible = false
 layout_mode = 0
 offset_top = 1.0
 offset_right = 256.0
@@ -123,6 +122,7 @@ theme_type_variation = &"FlatButton"
 icon = ExtResource("5_xpksx")
 
 [node name="Selection" type="Control" parent="TabContainer/Upgrades"]
+visible = false
 anchors_preset = 0
 offset_left = 3.0
 offset_top = 1.0
