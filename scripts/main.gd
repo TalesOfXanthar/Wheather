@@ -42,6 +42,14 @@ func _process(delta: float):
 				GlobalTimeScript.currentWeather = "None"
 		print("So you probably know how I got here...")
 	
+	elif GlobalTimeScript.currentWeather == "Clouds" && randi_range(1, 400) == 400:
+		GlobalTimeScript.tempature -= 1
+		GlobalTimeScript.precipitation += 1
+		if randi_range(1, 2) != 1:
+			rainChecker += 1
+			if rainChecker == 10:
+				GlobalTimeScript.currentWeather = "None"
+	
 	if GlobalTimeScript.precipitation > 100:
 		GlobalTimeScript.precipitation = 100
 	if GlobalTimeScript.precipitation < 0:
@@ -81,6 +89,7 @@ func _on_weather_timer_timeout() -> void:
 		initiated = false
 		spawnTornado()
 		GlobalTimeScript.precipitation -= 2
+		GlobalTimeScript.tempature -= 1
 		if GlobalTimeScript.weatherTrigger == true:
 			GlobalTimeScript.currentWeather = "None"
 			GlobalTimeScript.weatherTrigger = false
@@ -109,6 +118,7 @@ func _on_weather_check_timeout() -> void:
 				#High precipitation, failed low temp check
 				GlobalTimeScript.currentWeather = "Clouds"
 				print(GlobalTimeScript.currentWeather)
+				rainChecker = 0
 		else:
 			if randi_range(20,100) < GlobalTimeScript.tempature:
 				#Low precipitation, passed high temp check
