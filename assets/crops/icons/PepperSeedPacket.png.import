@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4b5qxbtwfa6l"
-path="res://.godot/imported/PepperSeedPacket.png-c586d1b3d4e3ca364a8d3eec2c9fb18b.ctex"
+path="res://.godot/imported/PepperSeedPacket.png-ab78a9a2769db656544fe93e3778368c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/Icons/PepperSeedPacket.png"
-dest_files=["res://.godot/imported/PepperSeedPacket.png-c586d1b3d4e3ca364a8d3eec2c9fb18b.ctex"]
+source_file="res://assets/crops/icons/PepperSeedPacket.png"
+dest_files=["res://.godot/imported/PepperSeedPacket.png-ab78a9a2769db656544fe93e3778368c.ctex"]
 
 [params]
 

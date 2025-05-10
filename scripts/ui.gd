@@ -1,9 +1,9 @@
 extends Control
 
-var sellPriceCost = 1000
-var seedPriceCost = 1000
-var tornadoCostPrice = 1000
-var rainCostPrice = 1000
+var sellPriceCost = 1
+var seedPriceCost = 1
+var tornadoCostPrice = 1
+var rainCostPrice = 1
 
 func _on_wheat_button_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton and event.pressed:
@@ -54,11 +54,13 @@ func _on_sell_price_pressed() -> void:
 		GlobalTimeScript.textBox = "You can't buy that, you don't have enough money!"
 
 func _on_seed_price_pressed() -> void:
-	if GlobalTimeScript.playerMoney >= seedPriceCost:
+	if GlobalTimeScript.playerMoney > seedPriceCost:
 		$"TabContainer/Upgrades/Selection/Wheat Upgrades/Economy/Seed Price".hide()
 		PlantDictionary.cropInfoDictionary["Wheat"]["PlantCost"] *= 0.5
+		print("money")
 	else:
 		GlobalTimeScript.textBox = "You can't buy that, you don't have enough money!"
+		print("nope")
 
 func _on_tornado_resistance_pressed() -> void:
 	if GlobalTimeScript.playerMoney >= tornadoCostPrice:
