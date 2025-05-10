@@ -36,7 +36,16 @@ var cropInfoDictionary = {
 		"CropGrowthIncrement": 26.25,
 		"RainGood": false,
 		"WeatherFrailty": {
-			"Tornado": 25
+			"Tornado": 50
+			}
+		},
+	"Wild Onions": {
+		"Value": 5.00,
+		"PlantCost": 4.00,
+		"CropGrowthIncrement": 50,
+		"RainGood": false,
+		"WeatherFrailty": {
+			"Tornado": 0
 			}
 		},
 }

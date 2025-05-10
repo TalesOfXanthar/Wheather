@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://pv7y6o0xsaay"]
+[gd_scene load_steps=30 format=3 uid="uid://pv7y6o0xsaay"]
 
 [ext_resource type="Script" uid="uid://d4gr35n32udag" path="res://scripts/placeholder_crop.gd" id="1_pauwt"]
 [ext_resource type="Texture2D" uid="uid://bf2y6572yp06x" path="res://assets/crops/growth_stages/carrot_spritesheet.png" id="2_1iseo"]
@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://dw2tpnicdrag2" path="res://assets/crops/growth_stages/PepperStageTwo.png" id="5_mc21y"]
 [ext_resource type="Texture2D" uid="uid://bpm3k03nek4d" path="res://assets/crops/growth_stages/CornStageThree.png" id="6_7kvly"]
 [ext_resource type="Texture2D" uid="uid://bp583rv8w7fux" path="res://assets/crops/growth_stages/PepperStageThree.png" id="6_gsibh"]
+[ext_resource type="Texture2D" uid="uid://cn3eucyn0t06w" path="res://assets/crops/growth_stages/OnionStageOne.png" id="12_gevwh"]
 [ext_resource type="Texture2D" uid="uid://d38o6ta4xyq7t" path="res://assets/crops/CropLock.png" id="13_1wr41"]
+[ext_resource type="Texture2D" uid="uid://begif2l7cx66w" path="res://assets/crops/growth_stages/OnionStageTwo.png" id="13_aq4ny"]
+[ext_resource type="Texture2D" uid="uid://by5as1k7goqcs" path="res://assets/crops/growth_stages/OnionStageThree.png" id="14_08f3e"]
 [ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="14_euxxt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgs"]
@@ -124,6 +127,23 @@ animations = [{
 "loop": true,
 "name": &"Wheat",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gevwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aq4ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_08f3e")
+}],
+"loop": true,
+"name": &"Wild Onions",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hy72"]
@@ -141,7 +161,7 @@ script = ExtResource("1_pauwt")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
-animation = &"Ground"
+animation = &"Wild Onions"
 offset = Vector2(-296, -568)
 
 [node name="CropButton" type="Button" parent="AnimatedSprite2D"]

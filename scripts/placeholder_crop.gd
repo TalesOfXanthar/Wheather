@@ -15,10 +15,10 @@ func _process(delta: float) -> void:
 	#PlantDictionary.cropInfoDictionary["Wheat"]["WeatherFrailty"]["Tornado"] = 0
 	if GlobalTimeScript.currentWeather == "Rain" && cropState != "Ground":
 		var remainingTimer = $CropGrowthIncrementTimer.time_left
-		if randi_range(1, 60) == 60 && PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["RainGood"]:
+		if randi_range(1, 60) == 60 && PlantDictionary.cropInfoDictionary[cropState]["RainGood"]:
 			$CropGrowthIncrementTimer.stop()
 			$CropGrowthIncrementTimer.start(remainingTimer - 0.25)
-		elif randi_range(1, 60) == 60 && !PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["RainGood"]:
+		elif randi_range(1, 60) == 60 && !PlantDictionary.cropInfoDictionary[cropState]["RainGood"]:
 			$CropGrowthIncrementTimer.stop()
 			$CropGrowthIncrementTimer.start(remainingTimer + 0.25)
 	if GlobalTimeScript.currentWeather == "Hail" && cropState != "Ground":
@@ -34,12 +34,14 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.hide()
 		$RichTextLabel.hide()
+		if randi_range(1, 32767) == 1 && cropState == "Ground":
+			plant_crop("Wild Onions")
 
 func _on_button_pressed():
 	if cropLocked == false:
 		if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
 			if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
-				plant_crop()
+				plant_crop(GlobalTimeScript.cursorState)
 			else:
 				GlobalTimeScript.textBox = "You can't plant that, you don't have enough money!"
 		if frame == 3:
@@ -58,14 +60,19 @@ func _on_timer_timeout():
 	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
 	$CropGrowthIncrementTimer.start()
 		
-func plant_crop():
-	cropState = GlobalTimeScript.cursorState
-	GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]
-	GlobalTimeScript.textBox = "You planted " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]) + "!"
+func plant_crop(localCropState):
+	cropState = localCropState
 	$AnimatedSprite2D.animation = cropState
+	if localCropState != "Wild Onions":
+		GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]
+		GlobalTimeScript.textBox = "You planted " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]) + "!"
+		GlobalTimeScript.precipitation += 3
+	else:
+		$AnimatedSprite2D.frame = 1
+		frame = 1
+		print("yippee")
 	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
 	$CropGrowthIncrementTimer.start()
-	GlobalTimeScript.precipitation += 3
 
 func return_to_ground():
 	GlobalTimeScript.playerMoney += PlantDictionary.cropInfoDictionary[cropState]["Value"]
