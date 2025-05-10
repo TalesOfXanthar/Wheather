@@ -29,7 +29,25 @@ func _process(delta: float) -> void:
 	
 	if cropLocked:
 		$Sprite2D.show()
-		$RichTextLabel.text = "$" + str(GlobalTimeScript.cropLockPrice)
+		var stringPrice = str(GlobalTimeScript.cropLockPrice)
+		var formattedPrice = ""
+		var mod = stringPrice.length() % 3
+		for i in range(0, stringPrice.length()):
+			if i != 0 && i % 3 == mod:
+				formattedPrice += "."
+			formattedPrice += stringPrice[i]
+		if stringPrice.length() > 6:
+			$RichTextLabel.text = "$" + formattedPrice[0] + formattedPrice[1]
+			if formattedPrice[2] != ".":
+				$RichTextLabel.text += formattedPrice[2]
+			$RichTextLabel.text += "m"
+		elif stringPrice.length() > 3:
+			$RichTextLabel.text = "$" + formattedPrice[0] + formattedPrice[1]
+			if formattedPrice[2] != ".":
+				$RichTextLabel.text += formattedPrice[2]
+			$RichTextLabel.text += "k"
+		else:
+			$RichTextLabel.text = "$" + stringPrice
 		$RichTextLabel.show()
 	else:
 		$Sprite2D.hide()
