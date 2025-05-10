@@ -3,10 +3,16 @@ extends Control
 var uiState = "Wheat"
 
 func _process(delta: float) -> void:
+	
 	$TabContainer/Upgrades/Selection/RainGains.text = "Crop growth in Rain\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"]))
 	$TabContainer/Upgrades/Selection/TornadoResistance.text = "Tornado Resistance\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"]))
 	$TabContainer/Upgrades/Selection/SeedPrice.text = "Cheap\nSeeds\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Cost"]))
 	$TabContainer/Upgrades/Selection/SellValue.text = "Crop\nValue\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Sell"]))
+	$"TabContainer/Seeds/Wheat Seed".text = "Wheat\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary["Wheat"]["PlantCost"])) + "0"
+	$"TabContainer/Seeds/Carrots Seed".text = "Carrot\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary["Carrots"]["PlantCost"])) + "0"
+	$"TabContainer/Seeds/Pepper Seed".text = "Pepper\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary["Pepper"]["PlantCost"])) + "0"
+	$"TabContainer/Seeds/Corn Seed".text = "Corn\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary["Corn"]["PlantCost"])) + "0"
+	
 
 func _on_wheat_button_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton and event.pressed:

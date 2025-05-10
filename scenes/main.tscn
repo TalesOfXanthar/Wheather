@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=64 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -19,6 +19,8 @@
 [ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://o4b4u8g88q5l" path="res://scenes/weather_text.tscn" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://cytqc83286pe5" path="res://assets/tiles/UI/UpgradeTile.png" id="18_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://c2ju8i100gcxv" path="res://assets/tiles/UI/MainMenu.png" id="20_gqmmt"]
+[ext_resource type="Theme" uid="uid://cjjnou2sqyo8x" path="res://Icon Font.tres" id="20_yc10j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -69,6 +71,72 @@ point_count = 9
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ld40"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqmmt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc10j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jscy8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pm3ni"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6deb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_og1vs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wyq8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vxglm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2f3dj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yq6so"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5poiv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cjbq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chjal"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjqg0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vchkt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txyw0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vc5cj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvyfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty1g6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j2jfr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bjg73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fv21b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tel4y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qkpxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5q0nq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgi5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j8jky"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kmb1v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fuf3a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pibwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6pm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5he1u"]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(1.81899e-12, 1.90735e-06)
@@ -306,7 +374,22 @@ offset_top = 12.0
 offset_right = 116.0
 offset_bottom = 52.0
 theme_type_variation = &"FlatButton"
-text = "Settings"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("15_jkv2x")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ld40")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gqmmt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yc10j")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_jscy8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_pm3ni")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_y6deb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_og1vs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_2wyq8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vxglm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2f3dj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yq6so")
+text = "Main Menu"
 
 [node name="WeatherCheck" type="Timer" parent="."]
 
@@ -332,6 +415,107 @@ z_index = 2
 position = Vector2(956, 208)
 texture = ExtResource("18_dp3eg")
 
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayButton" type="Button" parent="MainMenu"]
+z_index = 12
+layout_mode = 0
+offset_left = 136.0
+offset_top = 264.0
+offset_right = 232.0
+offset_bottom = 328.0
+theme = ExtResource("20_yc10j")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("15_jkv2x")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5poiv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2cjbq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_chjal")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_cjqg0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vchkt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_txyw0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vc5cj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nvyfr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty1g6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_j2jfr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bjg73")
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="MainMenu"]
+z_index = 12
+layout_mode = 0
+offset_left = 280.0
+offset_top = 264.0
+offset_right = 376.0
+offset_bottom = 328.0
+theme = ExtResource("20_yc10j")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("15_jkv2x")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5poiv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2cjbq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_chjal")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_cjqg0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vchkt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_txyw0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_vc5cj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nvyfr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ty1g6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_j2jfr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bjg73")
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="MainMenu"]
+z_index = 12
+layout_mode = 0
+offset_left = 424.0
+offset_top = 264.0
+offset_right = 520.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_fonts/font = ExtResource("15_jkv2x")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fv21b")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tel4y")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qkpxi")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5q0nq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dgi5k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_j8jky")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kmb1v")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_fuf3a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_pibwh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_c6pm6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5he1u")
+text = "Credits"
+
+[node name="TitleScreen" type="Sprite2D" parent="MainMenu"]
+z_index = 10
+position = Vector2(512, 288)
+texture = ExtResource("20_gqmmt")
+
+[node name="CreditsTile" type="Sprite2D" parent="MainMenu"]
+z_index = 11
+position = Vector2(184, 296)
+texture = ExtResource("18_dp3eg")
+
+[node name="SettingsTile" type="Sprite2D" parent="MainMenu"]
+z_index = 11
+position = Vector2(472, 296)
+texture = ExtResource("18_dp3eg")
+
+[node name="PlayTile" type="Sprite2D" parent="MainMenu"]
+z_index = 11
+position = Vector2(328, 296)
+texture = ExtResource("18_dp3eg")
+
 [connection signal="timeout" from="WeatherTimer" to="." method="_on_weather_timer_timeout"]
 [connection signal="pressed" from="Settings/Settings" to="." method="_on_settings_pressed"]
 [connection signal="timeout" from="WeatherCheck" to="." method="_on_weather_check_timeout"]
+[connection signal="pressed" from="MainMenu/PlayButton" to="." method="_on_play_button_pressed"]

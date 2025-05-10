@@ -10,10 +10,10 @@ func _ready() -> void:
 func _process(delta: float):
 	GlobalTimeScript.playerMoney = snapped(GlobalTimeScript.playerMoney, 0.01)
 	
-	if str(GlobalTimeScript.playerMoney)[-3] == ".":
-		$Money.text = "$" + str(GlobalTimeScript.playerMoney)
+	if str(GlobalTimeScript.playerMoney)[-3] == "." || GlobalTimeScript.playerMoney > 999.99:
+		$Money.text = GlobalTimeScript.valueFormatter(str(GlobalTimeScript.playerMoney))
 	else:
-		$Money.text = "$" + str(GlobalTimeScript.playerMoney) + "0"
+		$Money.text = GlobalTimeScript.valueFormatter(str(GlobalTimeScript.playerMoney)) + "0"
 	
 	# print(PlantDictionary["cropInfoDictionary"]["Wheat"]["Value"])
 	
@@ -97,10 +97,15 @@ func _on_weather_timer_timeout() -> void:
 
 
 func _on_settings_pressed() -> void:
-	pass # Replace with function body.
+	set_process(false)
+	$WeatherCheck.stop()
+	$WeatherTimer.stop()
+	$MainMenu.show()
+	
 
 
 func _on_weather_check_timeout() -> void:
+	$WeatherCheck.start(randi_range(10,15))
 	if GlobalTimeScript.currentWeather == "None":
 		if randi_range(20,100) < GlobalTimeScript.precipitation:
 			if randi_range(1,80) > GlobalTimeScript.tempature:
@@ -124,3 +129,9 @@ func _on_weather_check_timeout() -> void:
 				#Low precipitation, passed high temp check
 				GlobalTimeScript.currentWeather = "Wind"
 				print(GlobalTimeScript.currentWeather)
+
+
+func _on_play_button_pressed() -> void:
+	set_process(true)
+	$WeatherCheck.start($WeatherCheck.time_left)
+	$MainMenu.hide()
