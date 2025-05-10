@@ -15,12 +15,12 @@ func _process(delta: float) -> void:
 	#PlantDictionary.cropInfoDictionary["Wheat"]["WeatherFrailty"]["Tornado"] = 0
 	if GlobalTimeScript.currentWeather == "Rain" && cropState != "Ground":
 		var remainingTimer = $CropGrowthIncrementTimer.time_left
-		if randi_range(1, 60) == 60 && PlantDictionary.cropInfoDictionary[cropState]["RainGood"]:
+		if randi_range(1, 60) == 60:
 			$CropGrowthIncrementTimer.stop()
-			$CropGrowthIncrementTimer.start(remainingTimer - 0.25)
-		elif randi_range(1, 60) == 60 && !PlantDictionary.cropInfoDictionary[cropState]["RainGood"]:
-			$CropGrowthIncrementTimer.stop()
-			$CropGrowthIncrementTimer.start(remainingTimer + 0.25)
+			var newTime = remainingTimer - PlantDictionary.cropInfoDictionary[cropState]["WeatherFrailty"]["Rain"]
+			if newTime < 0.1:
+				newTime = 0.1
+			$CropGrowthIncrementTimer.start(newTime)
 	if GlobalTimeScript.currentWeather == "Hail" && cropState != "Ground":
 		var remainingTimer = $CropGrowthIncrementTimer.time_left
 		if randi_range(1, 50) == 60:

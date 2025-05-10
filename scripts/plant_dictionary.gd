@@ -7,45 +7,75 @@ var cropInfoDictionary = {
 		"Value": 30.00,
 		"PlantCost": 14.00,
 		"CropGrowthIncrement": 40,
-		"RainGood": true,
 		"WeatherFrailty": {
-			"Tornado": 50
+			"Tornado": 50,
+			"Rain": 0.25
+			},
+		"UpgradePrices": {
+			"Sell": 45,
+			"Rain": 60,
+			"Tornado": 70,
+			"Cost": 50
 			}
 		},
 	"Corn": {
 		"Value": 16.00,
 		"PlantCost": 11.00,
 		"CropGrowthIncrement": 23,
-		"RainGood": true,
 		"WeatherFrailty": {
-			"Tornado": 75
+			"Tornado": 75,
+			"Rain": 0.25
+			},
+		"UpgradePrices": {
+			"Sell": 45,
+			"Rain": 60,
+			"Tornado": 70,
+			"Cost": 50
 			}
 		},
 	"Carrots": {
 		"Value": 60.00,
 		"PlantCost": 20.00,
 		"CropGrowthIncrement": 2,
-		"RainGood": false,
 		"WeatherFrailty": {
-			"Tornado": 25
+			"Tornado": 25,
+			"Rain": -0.25
+			},
+		"UpgradePrices": {
+			"Sell": 45,
+			"Rain": 60,
+			"Tornado": 70,
+			"Cost": 50
 			}
 		},
 	"Pepper": {
 		"Value": 39.00,
 		"PlantCost": 22.00,
 		"CropGrowthIncrement": 26.25,
-		"RainGood": false,
 		"WeatherFrailty": {
-			"Tornado": 50
+			"Tornado": 50,
+			"Rain": -0.25
+			},
+		"UpgradePrices": {
+			"Sell": 45,
+			"Rain": 60,
+			"Tornado": 70,
+			"Cost": 50
 			}
 		},
 	"Wild Onions": {
 		"Value": 5.00,
 		"PlantCost": 4.00,
 		"CropGrowthIncrement": 75,
-		"RainGood": false,
 		"WeatherFrailty": {
-			"Tornado": 0
+			"Tornado": 0,
+			"Rain": -0.25
+			},
+		"UpgradePrices": {
+			"Sell": 45,
+			"Rain": 60,
+			"Tornado": 70,
+			"Cost": 50
 			}
 		},
 }

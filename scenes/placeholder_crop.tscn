@@ -197,6 +197,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_1wr41")
 theme_override_styles/focus = SubResource("StyleBoxFlat_euxxt")
 text = "hi"
 scroll_active = false
+horizontal_alignment = 1
 
 [connection signal="pressed" from="AnimatedSprite2D/CropButton" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="StaticBody2D" to="." method="_on_static_body_2d_area_entered"]

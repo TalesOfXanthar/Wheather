@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3hvq3akrn4bv"
-path="res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"
+uid="uid://d3t571ihsdymi"
+path="res://.godot/imported/RainHalf.png-5512f7068a27f23d0eebb85c9498bb3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/Icons/Corn seads.png"
-dest_files=["res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"]
+source_file="res://assets/RainHalf.png"
+dest_files=["res://.godot/imported/RainHalf.png-5512f7068a27f23d0eebb85c9498bb3f.ctex"]
 
 [params]
 

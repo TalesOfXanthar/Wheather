@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3hvq3akrn4bv"
-path="res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"
+uid="uid://diu1tp00dsh4s"
+path="res://.godot/imported/ShopTransHeader.png-9775590fdec7c07d652285a2585a8ebc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/Icons/Corn seads.png"
-dest_files=["res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"]
+source_file="res://assets/tiles/UI/ShopTransHeader.png"
+dest_files=["res://.godot/imported/ShopTransHeader.png-9775590fdec7c07d652285a2585a8ebc.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=29 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bnco3jkb63o4c" path="res://scenes/text_box.tscn" id="10_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://b63nyrfjudbcg" path="res://assets/tiles/UI/TextBox.png" id="11_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://c8djiibporiaj" path="res://assets/tiles/UI/ShopTile.png" id="11_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://c5yy3i3n1ur81" path="res://assets/tiles/UI/ShopHeaderNoClip.png" id="12_0ld40"]
 [ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://o4b4u8g88q5l" path="res://scenes/weather_text.tscn" id="17_muem4"]
 [ext_resource type="Texture2D" uid="uid://cytqc83286pe5" path="res://assets/tiles/UI/UpgradeTile.png" id="18_dp3eg"]
@@ -136,6 +137,12 @@ texture = ExtResource("11_a8y0u")
 z_index = 2
 position = Vector2(896, 352)
 texture = ExtResource("11_jbj1t")
+
+[node name="ShopHeader" type="Sprite2D" parent="BorderBackroundSprites"]
+z_index = 7
+position = Vector2(896, 148)
+scale = Vector2(1, 1)
+texture = ExtResource("12_0ld40")
 
 [node name="Moon" parent="." instance=ExtResource("4_jyhfs")]
 top_level = true
@@ -260,6 +267,8 @@ z_index = 3
 
 [node name="UI" parent="." instance=ExtResource("5_tbgi4")]
 z_index = 4
+offset_top = 24.0
+offset_bottom = 24.0
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-25.7, 115.077)
