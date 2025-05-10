@@ -316,13 +316,11 @@ texture = ExtResource("18_dp3eg")
 [node name="CropButton3" type="Sprite2D" parent="CropButtons"]
 z_index = 2
 position = Vector2(836, 208)
-scale = Vector2(1, 1)
 texture = ExtResource("18_dp3eg")
 
 [node name="CropButton4" type="Sprite2D" parent="CropButtons"]
 z_index = 2
 position = Vector2(956, 208)
-scale = Vector2(1, 1)
 texture = ExtResource("18_dp3eg")
 
 [connection signal="timeout" from="WeatherTimer" to="." method="_on_weather_timer_timeout"]
