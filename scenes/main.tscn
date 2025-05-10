@@ -209,7 +209,6 @@ texture = ExtResource("11_jbj1t")
 [node name="ShopHeader" type="Sprite2D" parent="BorderBackroundSprites"]
 z_index = 7
 position = Vector2(896, 148)
-scale = Vector2(1, 1)
 texture = ExtResource("12_0ld40")
 
 [node name="Moon" parent="." instance=ExtResource("4_jyhfs")]
