@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciet7eluannhi"
-path="res://.godot/imported/Brocoline seeds.png-f5d1532ec6a51555bd6f1780e26291bb.ctex"
+uid="uid://c2n1v507c035p"
+path="res://.godot/imported/Rain.png-ec0321f6ce9956505bd9c83f567795ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/icons/Brocoline seeds.png"
-dest_files=["res://.godot/imported/Brocoline seeds.png-f5d1532ec6a51555bd6f1780e26291bb.ctex"]
+source_file="res://assets/Rain.png"
+dest_files=["res://.godot/imported/Rain.png-ec0321f6ce9956505bd9c83f567795ec.ctex"]
 
 [params]
 

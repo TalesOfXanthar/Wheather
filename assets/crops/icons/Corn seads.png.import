@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3hvq3akrn4bv"
-path="res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"
+path="res://.godot/imported/Corn seads.png-6bdfbeee0d80d742094666bfc789badb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/crops/Icons/Corn seads.png"
-dest_files=["res://.godot/imported/Corn seads.png-4000169012e17c89ab893a16baf8a69f.ctex"]
+source_file="res://assets/crops/icons/Corn seads.png"
+dest_files=["res://.godot/imported/Corn seads.png-6bdfbeee0d80d742094666bfc789badb.ctex"]
 
 [params]
 
