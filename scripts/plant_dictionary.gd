@@ -5,7 +5,7 @@ extends Node
 var cropInfoDictionary = {
 	"Wheat": {
 		"Value": 30.00,
-		"PlantCost": 13.99,
+		"PlantCost": 14.00,
 		"CropGrowthIncrement": 40,
 		"RainGood": true,
 		"WeatherFrailty": {
@@ -14,7 +14,7 @@ var cropInfoDictionary = {
 		},
 	"Corn": {
 		"Value": 16.00,
-		"PlantCost": 10.99,
+		"PlantCost": 11.00,
 		"CropGrowthIncrement": 23,
 		"RainGood": true,
 		"WeatherFrailty": {
@@ -22,8 +22,8 @@ var cropInfoDictionary = {
 			}
 		},
 	"Carrots": {
-		"Value": 60,
-		"PlantCost": 20,
+		"Value": 60.00,
+		"PlantCost": 20.00,
 		"CropGrowthIncrement": 2,
 		"RainGood": false,
 		"WeatherFrailty": {
@@ -32,7 +32,7 @@ var cropInfoDictionary = {
 		},
 	"Pepper": {
 		"Value": 39.00,
-		"PlantCost": 21.99,
+		"PlantCost": 22.00,
 		"CropGrowthIncrement": 26.25,
 		"RainGood": false,
 		"WeatherFrailty": {
