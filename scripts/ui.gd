@@ -69,3 +69,29 @@ func _on_tornado_resistance_pressed() -> void:
 
 func _on_rain_pressed() -> void:
 	pass # Replace with function body.
+	if GlobalTimeScript.playerMoney >= sellPriceCost:
+		$"TabContainer/Upgrades/Selection/Carrot Upgrades/Economy/Sell Price1"
+		PlantDictionary.cropInfoDictionary["Carrots"]["Value"] *= 1.5
+	else:
+		GlobalTimeScript.textBox = "You can't buy that, you don't have enough money!"
+
+func _on_sell_price_1_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_seed_price_1_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_tornado_resistance_1_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_rain_1_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_carrots_pressed() -> void:
+	$"TabContainer/Upgrades/Selection/Carrot Upgrades".show()
+	$TabContainer/Upgrades/Crops.hide()
+	$TabContainer/Upgrades/Selection.show()

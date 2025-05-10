@@ -236,13 +236,86 @@ icon = ExtResource("9_w7enk")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
+[node name="Carrot Upgrades" type="Control" parent="TabContainer/Upgrades/Selection"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Economy" type="Control" parent="TabContainer/Upgrades/Selection/Carrot Upgrades"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sell Price1" type="Button" parent="TabContainer/Upgrades/Selection/Carrot Upgrades/Economy"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 122.0
+offset_bottom = 88.0
+theme = ExtResource("2_3wlde")
+theme_type_variation = &"FlatButton"
+text = "Quality
+Wheat"
+icon = ExtResource("7_24e4x")
+
+[node name="Seed Price1" type="Button" parent="TabContainer/Upgrades/Selection/Carrot Upgrades/Economy"]
+layout_mode = 2
+offset_left = 12.0
+offset_top = 97.0
+offset_right = 125.0
+offset_bottom = 176.0
+theme = ExtResource("2_3wlde")
+theme_type_variation = &"FlatButton"
+text = "Cheaper
+Seeds"
+icon = ExtResource("3_ukj8e")
+
+[node name="Resistance" type="Control" parent="TabContainer/Upgrades/Selection/Carrot Upgrades"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tornado Resistance1" type="Button" parent="TabContainer/Upgrades/Selection/Carrot Upgrades/Resistance"]
+layout_mode = 2
+offset_left = 132.0
+offset_top = 10.0
+offset_right = 244.0
+offset_bottom = 89.0
+theme = ExtResource("2_3wlde")
+theme_type_variation = &"FlatButton"
+text = "Tornado
+Resistance"
+icon = ExtResource("9_ukj8e")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="Rain1" type="Button" parent="TabContainer/Upgrades/Selection/Carrot Upgrades/Resistance"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 97.0
+offset_right = 244.0
+offset_bottom = 177.0
+theme = ExtResource("2_3wlde")
+theme_type_variation = &"FlatButton"
+text = "Change this
+whitman"
+icon = ExtResource("9_w7enk")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
 [connection signal="gui_input" from="TabContainer/Shop/Wheat Seed" to="." method="_on_wheat_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Carrots Seed" to="." method="_on_carrot_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Pepper Seed" to="." method="_on_pepper_button_gui_input"]
 [connection signal="gui_input" from="TabContainer/Shop/Corn Seed" to="." method="_on_corn_button_gui_input"]
 [connection signal="pressed" from="TabContainer/Upgrades/Crops/Wheat" to="." method="_on_wheat_pressed"]
+[connection signal="pressed" from="TabContainer/Upgrades/Crops/Carrots" to="." method="_on_carrots_pressed"]
 [connection signal="pressed" from="TabContainer/Upgrades/Selection/Exit" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TabContainer/Upgrades/Selection/Wheat Upgrades/Economy/Sell Price" to="." method="_on_sell_price_pressed"]
 [connection signal="pressed" from="TabContainer/Upgrades/Selection/Wheat Upgrades/Economy/Seed Price" to="." method="_on_seed_price_pressed"]
 [connection signal="pressed" from="TabContainer/Upgrades/Selection/Wheat Upgrades/Resistance/Tornado Resistance" to="." method="_on_tornado_resistance_pressed"]
 [connection signal="pressed" from="TabContainer/Upgrades/Selection/Wheat Upgrades/Resistance/Rain" to="." method="_on_rain_pressed"]
+[connection signal="pressed" from="TabContainer/Upgrades/Selection/Carrot Upgrades/Economy/Sell Price1" to="." method="_on_sell_price_1_pressed"]
+[connection signal="pressed" from="TabContainer/Upgrades/Selection/Carrot Upgrades/Economy/Seed Price1" to="." method="_on_seed_price_1_pressed"]
+[connection signal="pressed" from="TabContainer/Upgrades/Selection/Carrot Upgrades/Resistance/Tornado Resistance1" to="." method="_on_tornado_resistance_1_pressed"]
+[connection signal="pressed" from="TabContainer/Upgrades/Selection/Carrot Upgrades/Resistance/Rain1" to="." method="_on_rain_1_pressed"]
