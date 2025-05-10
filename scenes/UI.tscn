@@ -60,13 +60,13 @@ icon = ExtResource("3_ukj8e")
 [node name="Carrots Seed" type="Button" parent="TabContainer/Shop"]
 layout_mode = 2
 offset_left = 132.0
-offset_top = 9.0
+offset_top = 10.0
 offset_right = 244.0
-offset_bottom = 88.0
+offset_bottom = 89.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Carrot
-$14.00"
+$20.00"
 icon = ExtResource("4_3wlde")
 
 [node name="Pepper Seed" type="Button" parent="TabContainer/Shop"]
@@ -78,7 +78,7 @@ offset_bottom = 177.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Pepper
-$20.00"
+$22.00"
 icon = ExtResource("5_24e4x")
 
 [node name="Corn Seed" type="Button" parent="TabContainer/Shop"]
@@ -108,7 +108,7 @@ layout_mode = 2
 offset_left = 12.0
 offset_top = 9.0
 offset_right = 124.0
-offset_bottom = 88.0
+offset_bottom = 89.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Wheat
@@ -117,10 +117,10 @@ icon = ExtResource("3_ukj8e")
 
 [node name="Carrots" type="Button" parent="TabContainer/Upgrades/Crops"]
 layout_mode = 2
-offset_left = 130.0
-offset_top = 1.0
-offset_right = 239.0
-offset_bottom = 73.0
+offset_left = 132.0
+offset_top = 10.0
+offset_right = 244.0
+offset_bottom = 89.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Carrots
@@ -129,10 +129,10 @@ icon = ExtResource("4_3wlde")
 
 [node name="Pepper" type="Button" parent="TabContainer/Upgrades/Crops"]
 layout_mode = 2
-offset_left = 18.0
-offset_top = 77.0
-offset_right = 130.0
-offset_bottom = 149.0
+offset_left = 12.0
+offset_top = 97.0
+offset_right = 124.0
+offset_bottom = 177.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Peppers
@@ -141,10 +141,10 @@ icon = ExtResource("5_24e4x")
 
 [node name="Corn" type="Button" parent="TabContainer/Upgrades/Crops"]
 layout_mode = 2
-offset_left = 134.0
-offset_top = 77.0
-offset_right = 238.0
-offset_bottom = 149.0
+offset_left = 132.0
+offset_top = 97.0
+offset_right = 244.0
+offset_bottom = 177.0
 theme = ExtResource("2_3wlde")
 theme_type_variation = &"FlatButton"
 text = "Corn   
