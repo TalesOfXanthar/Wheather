@@ -176,63 +176,83 @@ position = Vector2(672, 224)
 
 [node name="CropB1" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(96, 352)
+cropLocked = true
 
 [node name="CropB2" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(160, 352)
+cropLocked = true
 
 [node name="CropB3" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(224, 352)
+cropLocked = true
 
 [node name="CropB4" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(288, 352)
+cropLocked = true
 
 [node name="CropB5" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(352, 352)
+cropLocked = true
 
 [node name="CropB6" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(416, 352)
+cropLocked = true
 
 [node name="CropB7" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(480, 352)
+cropLocked = true
 
 [node name="CropB8" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(544, 352)
+cropLocked = true
 
 [node name="CropB9" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(608, 352)
+cropLocked = true
 
 [node name="CropB0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 352)
+cropLocked = true
 
 [node name="CropC1" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(96, 480)
+cropLocked = true
 
 [node name="CropC2" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(160, 480)
+cropLocked = true
 
 [node name="CropC3" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(224, 480)
+cropLocked = true
 
 [node name="CropC4" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(288, 480)
+cropLocked = true
 
 [node name="CropC5" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(352, 480)
+cropLocked = true
 
 [node name="CropC6" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(416, 480)
+cropLocked = true
 
 [node name="CropC7" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(480, 480)
+cropLocked = true
 
 [node name="CropC8" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(544, 480)
+cropLocked = true
 
 [node name="CropC9" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(608, 480)
+cropLocked = true
 
 [node name="CropC0" parent="CropScenes" instance=ExtResource("5_tefeu")]
 position = Vector2(672, 480)
+cropLocked = true
 
 [node name="TextBox" parent="." instance=ExtResource("10_ya4ey")]
 z_index = 3

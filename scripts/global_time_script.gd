@@ -7,3 +7,4 @@ var currentWeather = "None"
 var weatherTrigger = false
 var precipitation = 50
 var tempature = 50
+var cropLockPrice = 32

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://pv7y6o0xsaay"]
+[gd_scene load_steps=27 format=3 uid="uid://pv7y6o0xsaay"]
 
 [ext_resource type="Script" uid="uid://d4gr35n32udag" path="res://scripts/placeholder_crop.gd" id="1_pauwt"]
 [ext_resource type="Texture2D" uid="uid://bf2y6572yp06x" path="res://assets/crops/growth_stages/carrot_spritesheet.png" id="2_1iseo"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://dw2tpnicdrag2" path="res://assets/crops/growth_stages/PepperStageTwo.png" id="5_mc21y"]
 [ext_resource type="Texture2D" uid="uid://bpm3k03nek4d" path="res://assets/crops/growth_stages/CornStageThree.png" id="6_7kvly"]
 [ext_resource type="Texture2D" uid="uid://bp583rv8w7fux" path="res://assets/crops/growth_stages/PepperStageThree.png" id="6_gsibh"]
+[ext_resource type="Texture2D" uid="uid://d38o6ta4xyq7t" path="res://assets/crops/CropLock.png" id="13_1wr41"]
+[ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="14_euxxt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6sgs"]
 atlas = ExtResource("2_1iseo")
@@ -127,13 +129,19 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6hy72"]
 size = Vector2(64, 64)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1wr41"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_euxxt"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Placeholder_Crop" type="Node2D"]
 script = ExtResource("1_pauwt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(296, 568)
 sprite_frames = SubResource("SpriteFrames_apr6d")
-animation = &"Wheat"
+animation = &"Ground"
 offset = Vector2(-296, -568)
 
 [node name="CropButton" type="Button" parent="AnimatedSprite2D"]
@@ -155,6 +163,20 @@ wait_time = 10.0
 
 [node name="PlantDictionaryScript" type="Node" parent="."]
 script = ExtResource("3_5xma4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("13_1wr41")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 32.0
+theme_override_fonts/normal_font = ExtResource("14_euxxt")
+theme_override_styles/background = SubResource("StyleBoxFlat_1wr41")
+theme_override_styles/focus = SubResource("StyleBoxFlat_euxxt")
+text = "hi"
+scroll_active = false
 
 [connection signal="pressed" from="AnimatedSprite2D/CropButton" to="." method="_on_button_pressed"]
 [connection signal="area_entered" from="StaticBody2D" to="." method="_on_static_body_2d_area_entered"]

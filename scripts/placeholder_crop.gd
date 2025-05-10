@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var cropLocked = false
 var frame = 0
 var plantAge = 0.0
 var plantGrowthIncrement = 1.0
@@ -25,16 +26,29 @@ func _process(delta: float) -> void:
 		if randi_range(1, 50) == 60:
 			$CropGrowthIncrementTimer.stop()
 			$CropGrowthIncrementTimer.start(remainingTimer + 0.2)
+	
+	if cropLocked:
+		$Sprite2D.show()
+		$RichTextLabel.text = "$" + str(GlobalTimeScript.cropLockPrice)
+		$RichTextLabel.show()
+	else:
+		$Sprite2D.hide()
+		$RichTextLabel.hide()
 
 func _on_button_pressed():
-	if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
-		if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
-			plant_crop()
-		else:
-			GlobalTimeScript.textBox = "You can't plant that, you don't have enough money!"
-	if frame == 3:
-		return_to_ground()
-
+	if cropLocked == false:
+		if cropState == "Ground" && GlobalTimeScript.cursorState != "Ground":
+			if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[GlobalTimeScript.cursorState]["PlantCost"]:
+				plant_crop()
+			else:
+				GlobalTimeScript.textBox = "You can't plant that, you don't have enough money!"
+		if frame == 3:
+			return_to_ground()
+	else: 
+		if GlobalTimeScript.playerMoney > GlobalTimeScript.cropLockPrice:
+			GlobalTimeScript.playerMoney -= GlobalTimeScript.cropLockPrice
+			cropLocked = false
+			GlobalTimeScript.cropLockPrice *= 2
 func _on_timer_timeout():
 	if frame != 3:
 		frame += 1
