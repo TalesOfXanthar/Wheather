@@ -135,3 +135,10 @@ func _on_play_button_pressed() -> void:
 	set_process(true)
 	$WeatherCheck.start($WeatherCheck.time_left)
 	$MainMenu.hide()
+	$MainMenu/CreditsBackround.hide()
+	$MainMenu/CreditsText.hide()
+
+
+func _on_credits_button_pressed() -> void:
+	$MainMenu/CreditsBackround.show()
+	$MainMenu/CreditsText.show()
