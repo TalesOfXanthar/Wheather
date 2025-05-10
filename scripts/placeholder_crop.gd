@@ -49,6 +49,8 @@ func _on_button_pressed():
 			GlobalTimeScript.playerMoney -= GlobalTimeScript.cropLockPrice
 			cropLocked = false
 			GlobalTimeScript.cropLockPrice *= 2
+		else:
+			GlobalTimeScript.textBox = "You can't unlock that, you don't have enough money!"
 func _on_timer_timeout():
 	if frame != 3:
 		frame += 1
@@ -59,7 +61,7 @@ func _on_timer_timeout():
 func plant_crop():
 	cropState = GlobalTimeScript.cursorState
 	GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]
-	GlobalTimeScript.textBox = "Planted " + cropState
+	GlobalTimeScript.textBox = "You planted " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["PlantCost"]) + "!"
 	$AnimatedSprite2D.animation = cropState
 	$CropGrowthIncrementTimer.wait_time = PlantDictionary.cropInfoDictionary[cropState]["CropGrowthIncrement"]
 	$CropGrowthIncrementTimer.start()
@@ -67,7 +69,7 @@ func plant_crop():
 
 func return_to_ground():
 	GlobalTimeScript.playerMoney += PlantDictionary.cropInfoDictionary[cropState]["Value"]
-	GlobalTimeScript.textBox = " You harvested " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["Value"]) + "!"
+	GlobalTimeScript.textBox = "You harvested " + cropState + " for $" + str(PlantDictionary.cropInfoDictionary[cropState]["Value"]) + "!"
 	cropState = "Ground"
 	$AnimatedSprite2D.animation = "Ground"
 	$CropGrowthIncrementTimer.stop()
