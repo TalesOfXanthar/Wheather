@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://ctgfbk7e8tmki"]
+[gd_scene load_steps=28 format=4 uid="uid://ctgfbk7e8tmki"]
 
 [ext_resource type="Texture2D" uid="uid://dcncdpr0golmm" path="res://assets/tiles/placeholder farmland.png" id="1_ok1o8"]
 [ext_resource type="Script" uid="uid://loim5gacwyl4" path="res://scripts/main.gd" id="1_sugp2"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c8djiibporiaj" path="res://assets/tiles/UI/ShopTile.png" id="11_jbj1t"]
 [ext_resource type="FontFile" uid="uid://2myli6hccnxj" path="res://assets/PixelifySans-VariableFont_wght.ttf" id="15_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://o4b4u8g88q5l" path="res://scenes/weather_text.tscn" id="17_muem4"]
+[ext_resource type="Texture2D" uid="uid://cytqc83286pe5" path="res://assets/tiles/UI/UpgradeTile.png" id="18_dp3eg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxvpd"]
 texture = ExtResource("1_ok1o8")
@@ -299,6 +300,30 @@ theme_type_variation = &"FlatButton"
 text = "Settings"
 
 [node name="WeatherCheck" type="Timer" parent="."]
+
+[node name="CropButtons" type="Node" parent="."]
+
+[node name="CropButton" type="Sprite2D" parent="CropButtons"]
+z_index = 2
+position = Vector2(836, 296)
+texture = ExtResource("18_dp3eg")
+
+[node name="CropButton2" type="Sprite2D" parent="CropButtons"]
+z_index = 2
+position = Vector2(956, 296)
+texture = ExtResource("18_dp3eg")
+
+[node name="CropButton3" type="Sprite2D" parent="CropButtons"]
+z_index = 2
+position = Vector2(836, 208)
+scale = Vector2(1, 1)
+texture = ExtResource("18_dp3eg")
+
+[node name="CropButton4" type="Sprite2D" parent="CropButtons"]
+z_index = 2
+position = Vector2(956, 208)
+scale = Vector2(1, 1)
+texture = ExtResource("18_dp3eg")
 
 [connection signal="timeout" from="WeatherTimer" to="." method="_on_weather_timer_timeout"]
 [connection signal="pressed" from="Settings/Settings" to="." method="_on_settings_pressed"]
