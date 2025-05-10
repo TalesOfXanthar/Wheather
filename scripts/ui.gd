@@ -2,6 +2,12 @@ extends Control
 
 var uiState = "Wheat"
 
+func _process(delta: float) -> void:
+	$TabContainer/Upgrades/Selection/RainGains.text = "Crop growth in Rain\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"]))
+	$TabContainer/Upgrades/Selection/TornadoResistance.text = "Tornado Resistance\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"]))
+	$TabContainer/Upgrades/Selection/SeedPrice.text = "Cheap\nSeeds\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Cost"]))
+	$TabContainer/Upgrades/Selection/SellValue.text = "Crop\nValue\n" + GlobalTimeScript.valueFormatter(str(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Sell"]))
+
 func _on_wheat_button_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton and event.pressed:
 			match event.button_index:
@@ -57,7 +63,7 @@ func _on_seed_price_pressed() -> void:
 func _on_tornado_resistance_pressed() -> void:
 	if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"]:
 		GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"]
-		PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"] *= 1.5
+		PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"] = snapped(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Tornado"] * 1.5, 0.01)
 		PlantDictionary.cropInfoDictionary[uiState]["WeatherFrailty"]["Tornado"] += 5
 	else:
 		GlobalTimeScript.textBox = "You can't buy that, you don't have enough money!"
@@ -65,7 +71,7 @@ func _on_tornado_resistance_pressed() -> void:
 func _on_rain_gains_pressed() -> void:
 	if GlobalTimeScript.playerMoney >= PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"]:
 		GlobalTimeScript.playerMoney -= PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"]
-		PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"] *= 1.4
+		PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"] = snapped(PlantDictionary.cropInfoDictionary[uiState]["UpgradePrices"]["Rain"] * 1.4, 0.01)
 		if PlantDictionary.cropInfoDictionary[uiState]["WeatherFrailty"]["Rain"] > 0:
 			PlantDictionary.cropInfoDictionary[uiState]["WeatherFrailty"]["Rain"] += 0.15
 		else:
