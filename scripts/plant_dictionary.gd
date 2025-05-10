@@ -42,7 +42,7 @@ var cropInfoDictionary = {
 	"Wild Onions": {
 		"Value": 5.00,
 		"PlantCost": 4.00,
-		"CropGrowthIncrement": 50,
+		"CropGrowthIncrement": 75,
 		"RainGood": false,
 		"WeatherFrailty": {
 			"Tornado": 0

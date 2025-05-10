@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 	else:
 		$Sprite2D.hide()
 		$RichTextLabel.hide()
-		if randi_range(1, 32767) == 1 && cropState == "Ground":
+		if randi_range(1, 65535) == 1 && cropState == "Ground":
 			plant_crop("Wild Onions")
 
 func _on_button_pressed():
